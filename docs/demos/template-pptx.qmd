@@ -3,7 +3,7 @@ title: "AAGI"
 author: "Analytics for the Australian Grain Industry"
 date: last-modified
 format:
-  aagi-pptx: default
+  cbada-pptx: default
 ---
 
 ```{r}
@@ -18,12 +18,12 @@ if (!require(flextable)) {
 }
 if (!require(AAGIThemes)) {
   install.packages("AAGIThemes",
-                 repos = c("https://aagi-aus.r-universe.dev",
+                 repos = c("https://cbada-aus.r-universe.dev",
                            "https://cloud.r-project.org"))
 }
 if (!require(AAGIPalettes)) {
   install.packages("AAGIPalettes",
-                   repos = c("https://aagi-aus.r-universe.dev",
+                   repos = c("https://cbada-aus.r-universe.dev",
                              "https://cloud.r-project.org"))
 }
 
@@ -35,10 +35,10 @@ library(ggplot2)
 library(AAGIThemes)
 
 # set ggplot2 theme
-theme_set(theme_aagi())
+theme_set(theme_cbada())
 ```
 
-## An AAGI pptx Theme for Quarto
+## A CCDM pptx Theme for Quarto
 
 This Quarto extension allows you to create your slides using a theme that follows AAGI typography and colour styles and provides the official AAGI logo and cover image for the title slide.
 
@@ -49,7 +49,7 @@ This Quarto extension allows you to create your slides using a theme that follow
 
 ## Tables
 
-For tables, we suggest paring with the R package [{AAGIThemes}](https://github.com/AAGI-AUS/AAGIThemes) to provide AAGI themed tables using `theme_ft_aagi`, that offers more flexibility in formatting.
+For tables, we suggest pairing with the R package [{AAGIThemes}](https://github.com/AAGI-AUS/AAGIThemes) to provide AAGI themed tables using `theme_ft_cbada`, that offers more flexibility in formatting.
 
 ## Example
 
@@ -64,7 +64,7 @@ library(AAGIThemes)
 
 # set flextable theme
 set_flextable_defaults(
-  theme_fun = theme_ft_aagi
+  theme_fun = theme_ft_cbada
 )
 
 flex_tab <- flextable(head(airquality) |>
@@ -81,7 +81,7 @@ flex_tab
 #| label: graphics-figure
 #| message: false
 library(AAGIThemes)
-plot_aagi(pressure)
+plot_cbada(pressure)
 ```
 
 ## Figures with {ggplot2}
@@ -119,7 +119,7 @@ ggplot() +
   facet_wrap(~ continent, ncol = 5) +
   scale_y_continuous(breaks = c(0, 2000000000, 4000000000),
                     labels = c(0, "2bn", "4bn")) +
-  theme_aagi() +
+  theme_cbada() +
   geom_hline(yintercept = 0,
             linewidth = 1,
             colour = "#474747") +

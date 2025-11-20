@@ -1,0 +1,186 @@
+/* CBADAQuarto — reveal.js custom theme (Efra variant, SCSS)
+   Fonts: Efra (headings & body), ui-monospace for code
+   Usage: compile to CSS and link after reveal.css
+*/
+
+// Font-face declarations
+@font-face {
+  font-family: "Efra";
+  src: local("Efra"),
+       url("fonts/Efra-Regular.woff2") format("woff2"),
+       url("fonts/Efra-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Efra";
+  src: local("Efra Medium"),
+       url("fonts/Efra-Medium.woff2") format("woff2"),
+       url("fonts/Efra-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Efra";
+  src: local("Efra Bold"),
+       url("fonts/Efra-Bold.woff2") format("woff2"),
+       url("fonts/Efra-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Variables
+$bg: #0f172a;
+$bg-alt: #111827;
+$surface: #1f2937;
+$text: #e5e7eb;
+$muted: #9ca3af;
+$accent: #22c55e;
+$accent-2: #38bdf8;
+$accent-3: #f59e0b;
+$link: #93c5fd;
+
+$heading-font: "Efra", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+$body-font: "Efra", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+$mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$content-max: 1200px;
+
+// Mixins
+@mixin callout($border-color, $bg-color) {
+  border-left: 6px solid $border-color;
+  background: $bg-color;
+  padding: 0.75em 1em;
+  margin: 0.6em 0;
+  border-radius: 8px;
+}
+
+// Theme styles
+.reveal {
+  font-family: $body-font;
+  font-size: 36px;
+  color: $text;
+
+  .slides {
+    text-align: left;
+  }
+
+  .backgrounds .slide-background {
+    background: linear-gradient(180deg, $bg, $bg-alt);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: $heading-font;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    color: #fff;
+  }
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.3em; color: $accent-2; font-weight: 600; }
+  h3 { font-size: 1.1em; color: $accent; }
+  h4 { font-size: 1em; color: $accent-3; }
+
+  p, li {
+    color: $text;
+    line-height: 1.35;
+  }
+
+  a {
+    color: $link;
+    text-decoration: underline;
+    &:hover { color: #bfdbfe; }
+  }
+
+  .muted { color: $muted; }
+  .accent { color: $accent; font-weight: 600; }
+
+  pre, code {
+    font-family: $mono-font;
+    font-size: 0.8em;
+  }
+  pre {
+    background: #0b1220;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    padding: 0.8em 1em;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+
+  ul, ol { margin-left: 0.4em; }
+  li { margin: 0.2em 0; }
+  ul ul, ol ol { font-size: 0.9em; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85em;
+
+    th, td {
+      padding: 0.5em 0.6em;
+      border-bottom: 1px solid #334155;
+    }
+    th {
+      background: #0b1220;
+      color: $link;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    tr:hover td { background: rgba(147, 197, 253, 0.08); }
+  }
+
+  section img {
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  }
+
+  .callout {
+    @include callout($accent, rgba(34, 197, 94, 0.08));
+  }
+  .note {
+    @include callout($accent-2, rgba(56, 189, 248, 0.08));
+  }
+
+  .footer {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6em;
+    color: $muted;
+  }
+
+  .fragment {
+    &.highlight-green { color: $accent; font-weight: 700; }
+    &.fade-up { transform: translateY(12px); opacity: 0; }
+    &.fade-up.visible { transform: translateY(0); opacity: 1; transition: 320ms ease; }
+  }
+}
+
+// Title slide
+section.title, .reveal section[data-state="title"] {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: 100%;
+
+  .title-content {
+    align-self: center;
+    max-width: $content-max;
+  }
+  h1 { font-size: 2.2em; margin: 0 0 0.2em 0; }
+  .subtitle { font-size: 1.1em; color: $muted; }
+  .meta { margin-top: 0.8em; color: $muted; }
+}
+
+// Print styles
+@media print {
+  .reveal {
+    font-size: 24px;
+    .backgrounds .slide-background { background: #fff !important; }
+    h1, h2, h3, h4, p, li { color: #111 !important; }
+  }
+}

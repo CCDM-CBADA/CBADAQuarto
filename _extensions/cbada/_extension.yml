@@ -1,6 +1,6 @@
-title: AAGIQuarto
+title: CBADAQuarto
 author: Adam H. Sparks, James J. Balamuta, Russell Edson, Vinh Thiem Ma, Rose Megirian, Zhanglong Cao, Sam Rogers, Julian Taylor
-version: 1.0.4
+version: 0.0.1
 quarto-required: ">=1.4.0"
 contributes:
   formats:
@@ -9,7 +9,7 @@ contributes:
       date-format: long
       slide-number: true
       footer: ""
-      logo: assets/aagi-logo.svg
+      logo: assets/ccdm-logo.svg
       title-slide-attributes:
         data-background-image: assets/title-slide-main.png
         data-background-size: 1050px auto
@@ -21,26 +21,6 @@ contributes:
       chalkboard: true
       execute:
         echo: true
-    pdf+report:
-      template: pdf-report/template.tex
-      engine: xelatex
-      csl: assets/biometrics.csl
-      format-resources:
-        - assets/aagi_logo.pdf
-        - assets/partners.pdf
-    pdf+short+report:
-      template: pdf-short-report/template.tex
-      engine: xelatex
-      csl: assets/biometrics.csl
-      link-citations: true
-      format-resources:
-        - assets/aagi_logo.pdf
-        - assets/partners.pdf
-    docx+report:
-      reference-doc: docx-report/template.docx
-      toc: true
-    docx+short+report:
-      reference-doc: docx-short-report/template.docx
     pptx:
       reference-doc: pptx/template.pptx
       toc: true

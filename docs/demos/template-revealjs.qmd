@@ -1,5 +1,5 @@
 ---
-title: "AAGI"
+title: "CCDM"
 author:
   - name: Adam Sparks
     orcid: 0000-0002-0061-8359
@@ -8,21 +8,8 @@ params:
     affiliation: CU
 date: last-modified
 format:
-  aagi-revealjs: default
+  cbada-revealjs: default
 ---
-
-```{r}
-#| label: title affiliation
-#| include: false
-
-if (params$affiliat == "CU") {
-  university <- "Curtin University"
-} else if (params$affiliation == "UA") {
-  university <- "University of Adelaide"
-} else {
-  university <- "University of Queensland"
-}
-```
 
 ```{r}
 #| label: load
@@ -36,13 +23,13 @@ if (!require(flextable)) {
 }
 if (!require(AAGIThemes)) {
 install.packages("AAGIThemes",
-                 repos = c("https://aagi-aus.r-universe.dev",
+                 repos = c("https://cbada-aus.r-universe.dev",
                            "https://cloud.r-project.org"))
 }
 
 if (!require(AAGIPalettes)) {
 install.packages("AAGIPalettes",
-                 repos = c("https://aagi-aus.r-universe.dev",
+                 repos = c("https://cbada-aus.r-universe.dev",
                            "https://cloud.r-project.org"))
 }
 
@@ -54,16 +41,16 @@ library(ggplot2)
 library(AAGIThemes)
 
 # set ggplot2 theme
-theme_set(theme_aagi())
+theme_set(theme_cbada())
 ```
 
-## An AAGI Reveal.js Theme for Quarto
+## An CCDM Reveal.js Theme for Quarto
 
 This Quarto extension allows you to create your slides using a theme that follows AAGI typography and colour styles and provides the official AAGI logo and cover image for the title slide.
 
 ## Basic Tables
 
-[AAGIQuarto](https://github.com/AAGI-AUS/AAGIQuarto) provides basic theming of HTML tables through CSS, for example, this is a markdown table.
+[CBADAQuarto](https://github.com/CBADA/CBADAQuarto) provides basic theming of HTML tables through CSS, for example, this is a markdown table.
 
 ```
 | Syntax      | Description |
@@ -81,7 +68,7 @@ That renders like this.
 
 ## Advanced Tables
 
-For more advanced tables, we suggest pairing with the R package [{AAGIThemes}](https://github.com/AAGI-AUS/AAGIThemes) to provide AAGI themed tables using `theme_gt_aagi()`, that offers more flexibility in formatting.
+For more advanced tables, we suggest pairing with the R package [{AAGIThemes}](https://github.com/AAGI-AUS/AAGIThemes) to provide AAGI themed tables using `theme_gt_cbada()`, that offers more flexibility in formatting.
 
 ```{r}
 #| label: AAGI table
@@ -94,7 +81,7 @@ library(AAGIThemes)
 
 gt <- gt(head(airquality) |>
  mutate(`Month Name` = "May"))
-gt <- theme_gt_aagi(gt)
+gt <- theme_gt_cbada(gt)
 gt
 ```
 
@@ -106,7 +93,7 @@ gt
 #| label: graphics-figure
 #| message: false
 library(AAGIThemes)
-plot_aagi(pressure)
+plot_cbada(pressure)
 ```
 
 ::: aside
@@ -148,7 +135,7 @@ ggplot() +
   facet_wrap(~ continent, ncol = 5) +
   scale_y_continuous(breaks = c(0, 2000000000, 4000000000),
                     labels = c(0, "2bn", "4bn")) +
-  theme_aagi() +
+  theme_cbada() +
   geom_hline(yintercept = 0,
             linewidth = 1,
             colour = "#474747") +
@@ -178,7 +165,7 @@ you will have the closing slide display the same image as the title slide under 
 -->
 ```
 
-# Thank You {background-image="_extensions/AAGI-AUS/aagi/assets/title-slide-main.png" background-size="1050px auto" background-position="50% 85%"}
+# Thank You {background-image="_extensions/cbada/assets/title-slide-main.png" background-size="1050px auto" background-position="50% 85%"}
 
 ```{=html}
 <!-- Uncomment if you have a bibliography

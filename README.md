@@ -1,26 +1,17 @@
 <img src="docs/demos/assets/aagi-logo.svg" align="right" style="margin:10px" />
 
-# AAGI Extension For Quarto
+# CBADA Extension For Quarto
 
-The `AAGIQuarto` Quarto extension provides official Analytics for the Australian Grains Industry (AAGI) project theming for Quarto documents.
-If you prefer to use R Markdown, please see the excellent [{AAGITemplates}](https://github.com/AAGI-AUS/AAGITemplates) package, which `AAGIQuarto` has feature parity with and shares the same underlying AAGI templates for the individual AAGI documents so that the outputs should be similar if not identical between these two tools.
-`AAGIQuarto` was developed to provide next-generation literate programming tools for AAGI's reporting and presentation needs that support R, Python and Julia languages.
+The `CBADAQuarto` Quarto extension provides official Centre for Crop and Disease Management (CCDM) project theming for Quarto documents.
 
 ## Template Formats
 
 See the included template and demo file for each format here:
 
-### Report Formats
-
-- **AAGI PDF Short Report:** [AAGI PDF Short Report Demo](https://aagi-aus.github.io/AAGIQuarto/demos/template-pdf-short-report+short+report.pdf) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-pdf-report.qmd))
-- **AAGI PDF Report:** [AAGI PDF Report Demo](https://aagi-aus.github.io/AAGIQuarto/demos/template-pdf-report+report.pdf) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-pdf-report.qmd))
-- **AAGI Word Document Report:** [AAGI Word Document Demo](https://aagi-aus.github.io/AAGIQuarto/demos/template-docx-report.docx) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-docx-report.qmd))
-- **AAGI Word Document Short Report:** [AAGI Word Document Short Demo](demos/template-docx-short-report.docx) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-docx-short-report.qmd))
-
 ### Presentation Formats
 
-- **AAGI revealjs Presentation:** [AAGI revealjs Slide Demo](https://aagi-aus.github.io/AAGIQuarto/demos/template-revealjs.html#/title-slide) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-revealjs.qmd)) (this is an AAGIQuarto exclusive)
-- **AAGI PowerPoint Presentation:** [AAGI PPT Slide Demo](https://aagi-aus.github.io/AAGIQuarto/demos/template-pptx.pptx) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-pptx.qmd))
+- **CCDM revealjs Presentation:** [AAGI revealjs Slide Demo](https://aagi-aus.github.io/AAGIQuarto/demos/template-revealjs.html#/title-slide) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-revealjs.qmd)) (this is an AAGIQuarto exclusive)
+- **CCDM PowerPoint Presentation:** [AAGI PPT Slide Demo](https://aagi-aus.github.io/AAGIQuarto/demos/template-pptx.pptx) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-pptx.qmd))
 
 ## Installing
 
@@ -40,7 +31,7 @@ You can obtain a copy of the extension by using the following commands in your B
 
 ```bash
 cd your_quarto_project_folder
-quarto use template AAGI-AUS/AAGIQuarto
+quarto use template CBADA/CBADAQuarto
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your LaTeX PDF, MS Word .docx or reveal.js presentation slides.
@@ -53,12 +44,8 @@ For documentation on using reveal.js slides in Quarto, please see,
 To use the formatted output, save your qmd file into the extension folder that you created using the command above.
 Then, in the output format use:
 
-- `aagi-docx+report`, for a full length MS Word report
-- `aagi-docx+short+report`, for a short MS Word report
 - `aagi-pptx`, for MS PPT output
 - `aagi-revealjs`, for a revealjs presentation
-- `aagi-pdf+report`, for a full length PDF report
-- `aagi-pdf+short+report`, for a short PDF report
 
 ### Template
 
@@ -73,12 +60,10 @@ As we continue to improve this extension through bug fixes or adding new functio
 
 ```bash
 cd your_quarto_project_folder
-quarto update AAGI-AUS/AAGIQuarto
+quarto update CBADA/CBADAQuarto
 ```
 
 ## Logo Rights
 
-The logo of this project and the AAGI strategic partners do not come under MIT License.
-The Analytics for the Australian Grains Industry (AAGI) project retains full rights to the AAGI logo and the Grains Research and Development Corporation (GRDC) and strategic partners, Curtin University, the University of Queensland and Adelaide University, retain full rights to their own logos, respectively.
-
-![](docs/demos/assets/Partners.svg)
+The logos in this project does not come under MIT License.
+The Centre for Crop and Disease Management (CCDM) project retains full rights to the CCDM logo, Curtin University retains full rights to the Curtin University logo and the Grains Research and Development Corporation (GRDC).
