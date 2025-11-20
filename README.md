@@ -17,7 +17,7 @@ See the included template and demo file for each format here:
 
 ### Getting Quarto
 
-If you do not have Quarto installed on your device (and are not already using RStudio, which includes it by default), you will need to do that first.
+If you do not have Quarto installed on your device; you will need to do that first.
 [Go here](https://quarto.org/docs/get-started/) for instructions on how to install Quarto.
 
 ### Getting the Template
