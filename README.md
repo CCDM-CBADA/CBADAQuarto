@@ -10,8 +10,8 @@ See the included template and demo file for each format here:
 
 ### Presentation Formats
 
-- **CCDM revealjs Presentation:** [AAGI revealjs Slide Demo](https://aagi-aus.github.io/AAGIQuarto/demos/template-revealjs.html#/title-slide) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-revealjs.qmd)) (this is an AAGIQuarto exclusive)
-- **CCDM PowerPoint Presentation:** [AAGI PPT Slide Demo](https://aagi-aus.github.io/AAGIQuarto/demos/template-pptx.pptx) ([Source](https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-pptx.qmd))
+- **CCDM revealjs Presentation:** [CCDM revealjs Slide Demo](https://CBADA.github.io/CBADAQuarto/demos/template-revealjs.html#/title-slide) ([Source](https://github.com/CBADA/CBADAQuarto/blob/main/docs/demos/template-revealjs.qmd))
+- **CCDM PowerPoint Presentation:** [CCDM Slide Demo](https://cbada.github.io/CBADAQuarto/demos/template-pptx.pptx) ([Source](https://github.com/cbada/CBADAQuarto/blob/main/docs/demos/template-pptx.qmd))
 
 ## Installing
 

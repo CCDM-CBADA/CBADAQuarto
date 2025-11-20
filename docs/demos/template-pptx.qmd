@@ -1,6 +1,6 @@
 ---
-title: "AAGI"
-author: "Analytics for the Australian Grain Industry"
+title: "CCDM"
+author: "Centre for Crop and Disease Managment"
 date: last-modified
 format:
   cbada-pptx: default
@@ -40,7 +40,7 @@ theme_set(theme_cbada())
 
 ## A CCDM pptx Theme for Quarto
 
-This Quarto extension allows you to create your slides using a theme that follows AAGI typography and colour styles and provides the official AAGI logo and cover image for the title slide.
+This Quarto extension allows you to create your slides using a theme that follows CCDM typography and colour styles and provides the official CCDM logo and cover image for the title slide.
 
 ## Bullet point
 
@@ -49,7 +49,7 @@ This Quarto extension allows you to create your slides using a theme that follow
 
 ## Tables
 
-For tables, we suggest pairing with the R package [{AAGIThemes}](https://github.com/AAGI-AUS/AAGIThemes) to provide AAGI themed tables using `theme_ft_cbada`, that offers more flexibility in formatting.
+For tables, we suggest pairing with the R package [{AAGIThemes}](https://github.com/AAGI-AUS/AAGIThemes) to provide CCDM themed tables using `theme_ft_cbada`, that offers more flexibility in formatting.
 
 ## Example
 
