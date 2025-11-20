@@ -44,8 +44,8 @@ For documentation on using reveal.js slides in Quarto, please see,
 To use the formatted output, save your qmd file into the extension folder that you created using the command above.
 Then, in the output format use:
 
-- `aagi-pptx`, for MS PPT output
-- `aagi-revealjs`, for a revealjs presentation
+- `cbada-pptx`, for MS PPT output
+- `cbada-revealjs`, for a revealjs presentation
 
 ### Template
 
