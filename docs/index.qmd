@@ -49,7 +49,7 @@ You can obtain a copy of the extension by using the following commands in your B
 
 ```bash
 cd your_quarto_project_folder
-quarto use template CCDM-AUS/CCDMQuarto
+quarto use template CCDM-CBADA/CBADAQuarto
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your LaTeX PDF, MS Word .docx or reveal.js presentation slides.
@@ -80,7 +80,7 @@ As we continue to improve this extension through bug fixes or adding new functio
 
 ```bash
 cd your_quarto_project_folder
-quarto update CCDM-AUS/CCDMQuarto
+quarto update CCDM-CBADA/CBADAQuarto
 ```
 
 ## Logo Rights
