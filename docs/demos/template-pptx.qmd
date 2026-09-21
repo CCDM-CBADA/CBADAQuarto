@@ -16,26 +16,8 @@ if (!require(pak)) {
 if (!require(flextable)) {
   pak::pak("flextable", dependencies = TRUE)
 }
-if (!require(AAGIThemes)) {
-  install.packages("AAGIThemes",
-                 repos = c("https://aagi-aus.r-universe.dev",
-                           "https://cloud.r-project.org"))
-}
-if (!require(AAGIPalettes)) {
-  install.packages("AAGIPalettes",
-                   repos = c("https://aagi-aus.r-universe.dev",
-                             "https://cloud.r-project.org"))
-}
-
-if (!require("gapminder")) {
-  install.packages("gapminder")
-}
 
 library(ggplot2)
-library(AAGIThemes)
-
-# set ggplot2 theme
-theme_set(theme_cbada())
 ```
 
 ## A CCDM pptx Theme for Quarto
@@ -44,59 +26,41 @@ This Quarto extension allows you to create your slides using a theme that follow
 
 ## Bullet point
 
--   Point 1
--   Point 2
+- Point 1
+- Point 2
 
 ## Tables
 
-For tables, we suggest pairing with the R package [{AAGIThemes}](https://github.com/AAGI-AUS/AAGIThemes) to provide CCDM themed tables using `theme_ft_cbada`, that offers more flexibility in formatting.
-
-## Example
+### Example
 
 ```{r}
-#| label: tab-AAGI
+#| label: tab
 #| message: false
 #| echo: false
 
 library(dplyr)
 library(flextable)
-library(AAGIThemes)
 
 # set flextable theme
-set_flextable_defaults(
-  theme_fun = theme_ft_cbada
-)
-
-flex_tab <- flextable(head(airquality) |>
- mutate(`Month Name` = "May")) |>
+flex_tab <- flextable(
+  head(airquality) |>
+    mutate(`Month Name` = "May")
+) |>
   autofit()
 flex_tab
 ```
 
-## Basic Figures
-
-[{AAGIThemes}](https://github.com/AAGI-AUS/AAGIThemes) also provides support for theming basic figures in R, for example.
-
-```{r}
-#| label: graphics-figure
-#| message: false
-library(AAGIThemes)
-plot_cbada(pressure)
-```
-
 ## Figures with {ggplot2}
-
-[{AAGIThemes}](https://github.com/AAGI-AUS/AAGIThemes) also provides support for theming [{ggplot2}](https://ggplot2.tidyverse.org) outputs in R, for example.
 
 ```{r}
 #| label: ggplot2-figure
 #| message: false
+
 #Prepare data
 
 library(gapminder)
 library(dplyr)
 library(ggplot2)
-library(AAGIThemes)
 
 facet <- gapminder |>
   filter(continent != "Americas") |>
@@ -105,39 +69,34 @@ facet <- gapminder |>
 #> `summarise()` has grouped output by 'continent'. You can override using the
 #> `.groups` argument.
 
-col_values <- c(
-  AAGIPalettes::colour_as_hex("AAGI Teal"),
-  AAGIPalettes::colour_as_hex("AAGI Green"),
-  AAGIPalettes::colour_as_hex("AAGI Yellow"),
-  AAGIPalettes::colour_as_hex("AAGI Blue")
-)
-
 #Make plot
 ggplot() +
   geom_area(data = facet, aes(x = year, y = pop, fill = continent)) +
   scale_fill_manual(values = col_values) +
-  facet_wrap(~ continent, ncol = 5) +
-  scale_y_continuous(breaks = c(0, 2000000000, 4000000000),
-                    labels = c(0, "2bn", "4bn")) +
-  theme_cbada() +
-  geom_hline(yintercept = 0,
-            linewidth = 1,
-            colour = "#474747") +
+  facet_wrap(~continent, ncol = 5) +
+  scale_y_continuous(
+    breaks = c(0, 2000000000, 4000000000),
+    labels = c(0, "2bn", "4bn")
+  ) +
+  geom_hline(yintercept = 0, linewidth = 1, colour = "#474747") +
   theme(legend.position = "none", axis.text.x = element_blank()) +
-  labs(title = "Asia's rapid growth", subtitle = "Population growth by continent, 1952-2007")
+  labs(
+    title = "Asia's rapid growth",
+    subtitle = "Population growth by continent, 1952-2007"
+  )
 ```
 
 ## Slides With Columns
 
-::::: columns
-::: {.column width="50%"}
+::: columns
+::::: {.column width="50%"}
 This is a column on the left.
-:::
-
-::: {.column width="50%"}
-This is a column on the right.
-:::
 :::::
+
+::::: {.column width="50%"}
+This is a column on the right.
+:::::
+:::
 
 # Thank You
 
