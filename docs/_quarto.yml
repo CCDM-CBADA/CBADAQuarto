@@ -8,16 +8,12 @@ website:
   reader-mode: true
   repo-url: https://github.com/AAGI-AUS/AAGIQuarto
   repo-actions: [edit, issue]
-  margin-header: |
-    ![](/demos/assets/aagi-logo.svg)
-  body-footer: |
-    ![](/demos/assets/Partners.svg)
   sidebar:
     style: "floating"
     search: true
     tools:
       - icon: github
-        href: https://github.com/AAGI-AUS/AAGIQuarto
+        href: https://github.com/CCDM-CBADA/CBADAQuarto
     contents: 
       - text: "Home"
         file: index.qmd
@@ -29,4 +25,4 @@ format:
     toc: true
     theme: 
       - none
-      - _extensions/aagi/revealjs/aagi.scss
+      - _extensions/cbada/revealjs/cbadaquarto.scss
