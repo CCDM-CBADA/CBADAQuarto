@@ -15,9 +15,9 @@ params:
 # All the params can be changed to align to your organisation and collaborator.
 # These can be changed here or in the terminal using the following command with
 # each -P represents a parameter:
-#             quarto render ... -P $params$:... -P $params2$:/// 
+#             quarto render ... -P $params$:... -P $params2$:///
   pri_bio: Your.Name
-  your_email : your.email@curtin.edu.au
+  email : your.email@curtin.edu.au
 date: "`r Sys.Date()`"
 date-format: long
 bibliography: your_references.bib # Replace with your .bib file
@@ -26,55 +26,14 @@ bibliography: your_references.bib # Replace with your .bib file
 ---
 title: "Your Catchy Title Here"
 # To force line spacing put two spaces before \n instead of one
-subtitle: "Your Subtile Here"
+subtitle: "Your Subtitle Here"
 author:
   - "`r params$pri_bio`, Author 2"
-email: "`r email`"
+email: "`r params$email`"
 ---
-
-```{r}
-#| label: install-load-aagi-theme
-#| include: false
-# {flextable} can be used for both word and pdf output
-if (!require(flextable)) {
-  install.packages("flextable")
-}
-
-# The AAGI colours match CCDM for the most part, so we'll piggyback for now
-# Integrating with AAGIPalettes, AAGIThemes
-if (!require(AAGIThemes)) {
-install.packages("AAGIThemes",
-                 repos = c("https://cbada-aus.r-universe.dev",
-                           "https://cloud.r-project.org"))
-}
-
-if (!require(AAGIPalettes)) {
-install.packages("AAGIPalettes",
-                 repos = c("https://cbada-aus.r-universe.dev",
-                           "https://cloud.r-project.org"))
-}
-```
-
-```{r}
-#| label: set-the-default-layout
-#| include: false
-
-library(flextable)
-library(ggplot2)
-library(AAGIThemes)
-library(AAGIPalettes)
-
-# set ggplot2 theme
-theme_set(theme_aagi())
-
-# set flextable theme
-set_flextable_defaults(
-  theme_fun = theme_ft_aagi
-)
-```
 
 # To compile a presentation, please see:
 
--   Revealjs: <https://quarto.org/docs/presentations/revealjs/>
+- Revealjs: <https://quarto.org/docs/presentations/revealjs/>
 
--   PowerPoint: <https://quarto.org/docs/presentations/powerpoint.html>
+- PowerPoint: <https://quarto.org/docs/presentations/powerpoint.html>
