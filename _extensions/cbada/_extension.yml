@@ -5,20 +5,21 @@ quarto-required: ">=1.4.0"
 contributes:
   formats:
     revealjs:
-      theme: [default, revealjs/aagi.scss]
+      theme: [default, revealjs/cbadaquarto.scss]
       date-format: long
       slide-number: true
       footer: ""
-      logo: assets/ccdm-logo.svg
+      logo: assets/ccdm-logo.png
       title-slide-attributes:
         data-background-image: assets/title-slide-main.png
-        data-background-size: 1050px auto
-        data-background-position: 50% 85%
+        data-background-size: cover
+        data-background-position: center
       highlight-style: breeze
       overview: true
       progress: true
       touch: true
-      chalkboard: true
+      chalkboard: false
+      menu: false
       execute:
         echo: true
     pptx:
