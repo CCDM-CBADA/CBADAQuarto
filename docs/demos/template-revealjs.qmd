@@ -23,10 +23,11 @@ if (!require(gapminder)) {
   install.packages("gapminder")
 }
 
-library(ggplot2)
+if (!require(gt)) {
+  install.packages("gt")
+}
 
-# set ggplot2 theme
-theme_set(theme_cbada())
+library(ggplot2)
 ```
 
 ## An CCDM Reveal.js Theme for Quarto

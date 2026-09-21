@@ -17,6 +17,14 @@ if (!require(flextable)) {
   pak::pak("flextable", dependencies = TRUE)
 }
 
+if (!require(gapminder)) {
+  pak::pak("gapminder", dependencies = TRUE)
+}
+
+if (!require(gt)) {
+  pak::pak("gt", dependencies = TRUE)
+}
+
 library(ggplot2)
 ```
 
