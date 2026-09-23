@@ -25,4 +25,4 @@ format:
     toc: true
     theme: 
       - none
-      - _extensions/cbada/revealjs/cbadaquarto.scss
+      - ../_extensions/cbada/revealjs/cbadaquarto.scss
