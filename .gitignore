@@ -370,3 +370,5 @@ TSWLatexianTemp*
 AAGIQuarto.Rproj
 
 **/*.quarto_ipynb
+/docs/_extensions/CCDM-CBADA/cbada
+/docs/_extensions
