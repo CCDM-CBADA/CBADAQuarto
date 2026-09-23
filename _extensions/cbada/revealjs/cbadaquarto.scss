@@ -73,6 +73,20 @@ $presentation-h4-font-size: 1.0em;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Effra";
+  src: local("Effra Medium");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Effra";
+  src: local("Effra Bold");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 // ---------------------------------------------------------------------------
 // Base reveal styles
