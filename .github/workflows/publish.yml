@@ -58,7 +58,7 @@ jobs:
         - name: Copy fonts from extension to docs
           run: |
             mkdir -p ./docs/fonts
-            cp -r ./docs/_extensions/CCDM-CBADA/cbaba/CBADAQuarto/revealjs/fonts/* ./docs/fonts/
+            cp -r ./docs/_extensions/CCDM-CBADA/cbada/CBADAQuarto/revealjs/fonts/* ./docs/fonts/
 
         - name: Publish to GitHub Pages (and render)
           uses: quarto-dev/quarto-actions/publish@v2
