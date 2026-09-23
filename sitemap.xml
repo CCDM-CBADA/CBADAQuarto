@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://AAGI-AUS.github.io/AAGIQuarto/release-notes.html</loc>
-    <lastmod>2025-11-19T02:29:42.984Z</lastmod>
+    <loc>https://CCDM-CBADA.github.io/CBADAQuarto/demos/template-revealjs.html</loc>
+    <lastmod>2026-09-23T07:00:24.205Z</lastmod>
   </url>
   <url>
-    <loc>https://AAGI-AUS.github.io/AAGIQuarto/demos/template-revealjs.html</loc>
-    <lastmod>2025-11-19T02:29:42.984Z</lastmod>
+    <loc>https://CCDM-CBADA.github.io/CBADAQuarto/index.html</loc>
+    <lastmod>2026-09-23T07:00:24.205Z</lastmod>
   </url>
   <url>
-    <loc>https://AAGI-AUS.github.io/AAGIQuarto/index.html</loc>
-    <lastmod>2025-11-19T02:29:42.984Z</lastmod>
+    <loc>https://CCDM-CBADA.github.io/CBADAQuarto/release-notes.html</loc>
+    <lastmod>2026-09-23T07:00:24.205Z</lastmod>
   </url>
 </urlset>

@@ -6,22 +6,28 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-98597cea2d0351c6feaf4159bb7ae989.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-49e78a5e0145f8265a4cbca2da23a9cc.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Adam Sparks">
-  <meta name="dcterms.date" content="2025-11-19">
-  <title>AAGIQuarto – AAGI</title>
+  <meta name="dcterms.date" content="2026-09-23">
+  <title>AAGIQuarto – CCDM</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -96,12 +102,10 @@
     code span.vs { color: #bf0303; } /* VerbatimString */
     code span.wa { color: #bf0303; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f03e008d7a628ab789a28ec6f7285d97.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-afd9f053e146aad00dfb0abf7bf8aad0.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -195,13 +199,13 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="_extensions/AAGI-AUS/aagi/assets/title-slide-main.png" data-background-position="50% 85%" data-background-size="1050px auto" class="quarto-title-block center">
-  <h1 class="title">AAGI</h1>
+<section id="title-slide" data-background-image="../site_libs/quarto-contrib/quarto-project/CCDM-CBADA/cbada/assets/title-slide-main.png" data-background-position="center" data-background-size="cover" class="quarto-title-block center">
+  <h1 class="title">CCDM</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-author-orcid" aria-label="ORCID profile for Adam Sparks"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
 </div>
 <div class="quarto-title-author-email">
 <a href="mailto:adam.sparks@curtin.edu.au">adam.sparks@curtin.edu.au</a>
@@ -209,47 +213,32 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
 </div>
 </div>
 
-  <p class="date">November 19, 2025</p>
+  <p class="date">September 23, 2026</p>
 </section>
 <section class="slide level2">
 
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(pak)) {</span>
-<span id="cb1-2"><a></a>  <span class="fu">install.packages</span>(<span class="st">"pak"</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-3"><a></a>}</span>
-<span id="cb1-4"><a></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(flextable)) {</span>
-<span id="cb1-5"><a></a>  pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"flextable"</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-6"><a></a>}</span>
-<span id="cb1-7"><a></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(AAGIThemes)) {</span>
-<span id="cb1-8"><a></a><span class="fu">install.packages</span>(<span class="st">"AAGIThemes"</span>,</span>
-<span id="cb1-9"><a></a>                 <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://aagi-aus.r-universe.dev"</span>,</span>
-<span id="cb1-10"><a></a>                           <span class="st">"https://cloud.r-project.org"</span>))</span>
-<span id="cb1-11"><a></a>}</span>
-<span id="cb1-12"><a></a></span>
-<span id="cb1-13"><a></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(AAGIPalettes)) {</span>
-<span id="cb1-14"><a></a><span class="fu">install.packages</span>(<span class="st">"AAGIPalettes"</span>,</span>
-<span id="cb1-15"><a></a>                 <span class="at">repos =</span> <span class="fu">c</span>(<span class="st">"https://aagi-aus.r-universe.dev"</span>,</span>
-<span id="cb1-16"><a></a>                           <span class="st">"https://cloud.r-project.org"</span>))</span>
-<span id="cb1-17"><a></a>}</span>
-<span id="cb1-18"><a></a></span>
-<span id="cb1-19"><a></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(gapminder)) {</span>
-<span id="cb1-20"><a></a>  <span class="fu">install.packages</span>(<span class="st">"gapminder"</span>)</span>
-<span id="cb1-21"><a></a>}</span>
-<span id="cb1-22"><a></a></span>
-<span id="cb1-23"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-24"><a></a><span class="fu">library</span>(AAGIThemes)</span>
-<span id="cb1-25"><a></a></span>
-<span id="cb1-26"><a></a><span class="co"># set ggplot2 theme</span></span>
-<span id="cb1-27"><a></a><span class="fu">theme_set</span>(<span class="fu">theme_aagi</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-label="1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(pak)) {</span>
+<span id="cb1-2"><a aria-label="2"></a>  <span class="fu">install.packages</span>(<span class="st">"pak"</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-3"><a aria-label="3"></a>}</span>
+<span id="cb1-4"><a aria-label="4"></a></span>
+<span id="cb1-5"><a aria-label="5"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(gapminder)) {</span>
+<span id="cb1-6"><a aria-label="6"></a>  <span class="fu">install.packages</span>(<span class="st">"gapminder"</span>)</span>
+<span id="cb1-7"><a aria-label="7"></a>}</span>
+<span id="cb1-8"><a aria-label="8"></a></span>
+<span id="cb1-9"><a aria-label="9"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(gt)) {</span>
+<span id="cb1-10"><a aria-label="10"></a>  <span class="fu">install.packages</span>(<span class="st">"gt"</span>)</span>
+<span id="cb1-11"><a aria-label="11"></a>}</span>
+<span id="cb1-12"><a aria-label="12"></a></span>
+<span id="cb1-13"><a aria-label="13"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="an-aagi-reveal.js-theme-for-quarto" class="slide level2">
-<h2>An AAGI Reveal.js Theme for Quarto</h2>
-<p>This Quarto extension allows you to create your slides using a theme that follows AAGI typography and colour styles and provides the official AAGI logo and cover image for the title slide.</p>
+<section id="an-ccdm-reveal.js-theme-for-quarto" class="slide level2">
+<h2>An CCDM Reveal.js Theme for Quarto</h2>
+<p>This Quarto extension allows you to create your slides using a theme that follows CCDM typography and colour styles and provides the official CCDM logo and cover image for the title slide.</p>
 </section>
 <section id="basic-tables" class="slide level2">
 <h2>Basic Tables</h2>
-<p><a href="https://github.com/AAGI-AUS/AAGIQuarto">AAGIQuarto</a> provides basic theming of HTML tables through CSS, for example, this is a markdown table.</p>
 <pre><code>| Syntax      | Description |
 | ----------- | ----------- |
 | Header      | Title       |
@@ -276,44 +265,43 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
 </section>
 <section id="advanced-tables" class="slide level2">
 <h2>Advanced Tables</h2>
-<p>For more advanced tables, we suggest pairing with the R package <a href="https://github.com/AAGI-AUS/AAGIThemes">{AAGIThemes}</a> to provide AAGI themed tables using <code>theme_gt_aagi()</code>, that offers more flexibility in formatting.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb3-2"><a></a><span class="fu">library</span>(gt)</span>
-<span id="cb3-3"><a></a><span class="fu">library</span>(AAGIThemes)</span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a>gt <span class="ot">&lt;-</span> <span class="fu">gt</span>(<span class="fu">head</span>(airquality) <span class="sc">|&gt;</span></span>
-<span id="cb3-6"><a></a> <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Month Name</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"May"</span>))</span>
-<span id="cb3-7"><a></a>gt <span class="ot">&lt;-</span> <span class="fu">theme_gt_aagi</span>(gt)</span>
-<span id="cb3-8"><a></a>gt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-2"><a aria-label="2"></a><span class="fu">library</span>(gt)</span>
+<span id="cb3-3"><a aria-label="3"></a></span>
+<span id="cb3-4"><a aria-label="4"></a>gt <span class="ot">&lt;-</span> <span class="fu">gt</span>(</span>
+<span id="cb3-5"><a aria-label="5"></a>  <span class="fu">head</span>(airquality) <span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a aria-label="6"></a>    <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Month Name</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"May"</span>)</span>
+<span id="cb3-7"><a aria-label="7"></a>)</span>
+<span id="cb3-8"><a aria-label="8"></a>gt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="alrafxgqxu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#alrafxgqxu table {
-  font-family: 'Proxima Nova', Arial, system-ui, 'Segoe UI', Roboto, Helvetica, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+<div id="bdvlefojfp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bdvlefojfp table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#alrafxgqxu thead, #alrafxgqxu tbody, #alrafxgqxu tfoot, #alrafxgqxu tr, #alrafxgqxu td, #alrafxgqxu th {
+#bdvlefojfp thead, #bdvlefojfp tbody, #bdvlefojfp tfoot, #bdvlefojfp tr, #bdvlefojfp td, #bdvlefojfp th {
   border-style: none;
 }
 
-#alrafxgqxu p {
+#bdvlefojfp p {
   margin: 0;
   padding: 0;
 }
 
-#alrafxgqxu .gt_table {
+#bdvlefojfp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
   margin-left: auto;
   margin-right: auto;
-  color: #414042;
+  color: #333333;
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
-  background-color: #F2F2F2;
+  background-color: #FFFFFF;
   width: auto;
   border-top-style: solid;
   border-top-width: 2px;
@@ -329,39 +317,39 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   border-left-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_caption {
+#bdvlefojfp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#alrafxgqxu .gt_title {
-  color: #414042;
+#bdvlefojfp .gt_title {
+  color: #333333;
   font-size: 125%;
   font-weight: initial;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
-  border-bottom-color: #F2F2F2;
+  border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
 
-#alrafxgqxu .gt_subtitle {
-  color: #414042;
+#bdvlefojfp .gt_subtitle {
+  color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 3px;
   padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  border-top-color: #F2F2F2;
+  border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#alrafxgqxu .gt_heading {
-  background-color: #F2F2F2;
+#bdvlefojfp .gt_heading {
+  background-color: #FFFFFF;
   text-align: center;
-  border-bottom-color: #F2F2F2;
+  border-bottom-color: #FFFFFF;
   border-left-style: none;
   border-left-width: 1px;
   border-left-color: #D3D3D3;
@@ -370,13 +358,13 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   border-right-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_bottom_border {
+#bdvlefojfp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_col_headings {
+#bdvlefojfp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -391,11 +379,11 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   border-right-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_col_heading {
-  color: #FFFFFF;
-  background-color: #00808B;
+#bdvlefojfp .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: inherit;
   border-left-style: none;
   border-left-width: 1px;
@@ -411,11 +399,11 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   overflow-x: hidden;
 }
 
-#alrafxgqxu .gt_column_spanner_outer {
-  color: #FFFFFF;
-  background-color: #00808B;
+#bdvlefojfp .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: inherit;
   padding-top: 0;
   padding-bottom: 0;
@@ -423,15 +411,15 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   padding-right: 4px;
 }
 
-#alrafxgqxu .gt_column_spanner_outer:first-child {
+#bdvlefojfp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#alrafxgqxu .gt_column_spanner_outer:last-child {
+#bdvlefojfp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#alrafxgqxu .gt_column_spanner {
+#bdvlefojfp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -443,17 +431,17 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   width: 100%;
 }
 
-#alrafxgqxu .gt_spanner_row {
+#bdvlefojfp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#alrafxgqxu .gt_group_heading {
+#bdvlefojfp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
   padding-right: 5px;
-  color: #414042;
-  background-color: #F2F2F2;
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -473,10 +461,10 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   text-align: left;
 }
 
-#alrafxgqxu .gt_empty_group_heading {
+#bdvlefojfp .gt_empty_group_heading {
   padding: 0.5px;
-  color: #414042;
-  background-color: #F2F2F2;
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   border-top-style: solid;
@@ -488,15 +476,15 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   vertical-align: middle;
 }
 
-#alrafxgqxu .gt_from_md > :first-child {
+#bdvlefojfp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#alrafxgqxu .gt_from_md > :last-child {
+#bdvlefojfp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#alrafxgqxu .gt_row {
+#bdvlefojfp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -515,9 +503,9 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   overflow-x: hidden;
 }
 
-#alrafxgqxu .gt_stub {
-  color: #414042;
-  background-color: #F2F2F2;
+#bdvlefojfp .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -528,9 +516,9 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   padding-right: 5px;
 }
 
-#alrafxgqxu .gt_stub_row_group {
-  color: #414042;
-  background-color: #F2F2F2;
+#bdvlefojfp .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
   font-size: 100%;
   font-weight: initial;
   text-transform: inherit;
@@ -542,17 +530,17 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   vertical-align: top;
 }
 
-#alrafxgqxu .gt_row_group_first td {
+#bdvlefojfp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#alrafxgqxu .gt_row_group_first th {
+#bdvlefojfp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#alrafxgqxu .gt_summary_row {
-  color: #414042;
-  background-color: #F2F2F2;
+#bdvlefojfp .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
   text-transform: inherit;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -560,16 +548,16 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   padding-right: 5px;
 }
 
-#alrafxgqxu .gt_first_summary_row {
+#bdvlefojfp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_first_summary_row.thick {
+#bdvlefojfp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#alrafxgqxu .gt_last_summary_row {
+#bdvlefojfp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -579,9 +567,9 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   border-bottom-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_grand_summary_row {
-  color: #414042;
-  background-color: #F2F2F2;
+#bdvlefojfp .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
   text-transform: inherit;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -589,7 +577,7 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   padding-right: 5px;
 }
 
-#alrafxgqxu .gt_first_grand_summary_row {
+#bdvlefojfp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -599,7 +587,7 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   border-top-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_last_grand_summary_row_top {
+#bdvlefojfp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -609,11 +597,11 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   border-bottom-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_striped {
+#bdvlefojfp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#alrafxgqxu .gt_table_body {
+#bdvlefojfp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -622,9 +610,9 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   border-bottom-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_footnotes {
-  color: #414042;
-  background-color: #F2F2F2;
+#bdvlefojfp .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -636,7 +624,7 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   border-right-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_footnote {
+#bdvlefojfp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -645,9 +633,9 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   padding-right: 5px;
 }
 
-#alrafxgqxu .gt_sourcenotes {
-  color: #414042;
-  background-color: #F2F2F2;
+#bdvlefojfp .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -659,7 +647,7 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   border-right-color: #D3D3D3;
 }
 
-#alrafxgqxu .gt_sourcenote {
+#bdvlefojfp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -667,72 +655,72 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
   padding-right: 5px;
 }
 
-#alrafxgqxu .gt_left {
+#bdvlefojfp .gt_left {
   text-align: left;
 }
 
-#alrafxgqxu .gt_center {
+#bdvlefojfp .gt_center {
   text-align: center;
 }
 
-#alrafxgqxu .gt_right {
+#bdvlefojfp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#alrafxgqxu .gt_font_normal {
+#bdvlefojfp .gt_font_normal {
   font-weight: normal;
 }
 
-#alrafxgqxu .gt_font_bold {
+#bdvlefojfp .gt_font_bold {
   font-weight: bold;
 }
 
-#alrafxgqxu .gt_font_italic {
+#bdvlefojfp .gt_font_italic {
   font-style: italic;
 }
 
-#alrafxgqxu .gt_super {
+#bdvlefojfp .gt_super {
   font-size: 65%;
 }
 
-#alrafxgqxu .gt_footnote_marks {
+#bdvlefojfp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#alrafxgqxu .gt_asterisk {
+#bdvlefojfp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#alrafxgqxu .gt_indent_1 {
+#bdvlefojfp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#alrafxgqxu .gt_indent_2 {
+#bdvlefojfp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#alrafxgqxu .gt_indent_3 {
+#bdvlefojfp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#alrafxgqxu .gt_indent_4 {
+#bdvlefojfp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#alrafxgqxu .gt_indent_5 {
+#bdvlefojfp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#alrafxgqxu .katex-display {
+#bdvlefojfp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#alrafxgqxu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bdvlefojfp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -740,88 +728,73 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
 <table class="gt_table caption-top" data-quarto-bootstrap="false">
 <thead>
 <tr class="gt_col_headings header">
-<th id="Ozone" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff" scope="col">Ozone</th>
-<th id="Solar.R" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff" scope="col">Solar.R</th>
-<th id="Wind" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff" scope="col">Wind</th>
-<th id="Temp" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff" scope="col">Temp</th>
-<th id="Month" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff" scope="col">Month</th>
-<th id="Day" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff" scope="col">Day</th>
-<th id="Month-Name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff" scope="col">Month Name</th>
+<th id="Ozone" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Ozone</th>
+<th id="Solar.R" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Solar.R</th>
+<th id="Wind" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Wind</th>
+<th id="Temp" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Temp</th>
+<th id="Month" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Month</th>
+<th id="Day" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Day</th>
+<th id="Month-Name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Month Name</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_right" headers="Ozone" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">41</td>
-<td class="gt_row gt_right" headers="Solar.R" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">190</td>
-<td class="gt_row gt_right" headers="Wind" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">7.4</td>
-<td class="gt_row gt_right" headers="Temp" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">67</td>
-<td class="gt_row gt_right" headers="Month" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">5</td>
-<td class="gt_row gt_right" headers="Day" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">1</td>
-<td class="gt_row gt_left" headers="Month Name" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">May</td>
+<td class="gt_row gt_right" headers="Ozone">41</td>
+<td class="gt_row gt_right" headers="Solar.R">190</td>
+<td class="gt_row gt_right" headers="Wind">7.4</td>
+<td class="gt_row gt_right" headers="Temp">67</td>
+<td class="gt_row gt_right" headers="Month">5</td>
+<td class="gt_row gt_right" headers="Day">1</td>
+<td class="gt_row gt_left" headers="Month Name">May</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="Ozone" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">36</td>
-<td class="gt_row gt_right" headers="Solar.R" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">118</td>
-<td class="gt_row gt_right" headers="Wind" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">8.0</td>
-<td class="gt_row gt_right" headers="Temp" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">72</td>
-<td class="gt_row gt_right" headers="Month" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">5</td>
-<td class="gt_row gt_right" headers="Day" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">2</td>
-<td class="gt_row gt_left" headers="Month Name" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">May</td>
+<td class="gt_row gt_right" headers="Ozone">36</td>
+<td class="gt_row gt_right" headers="Solar.R">118</td>
+<td class="gt_row gt_right" headers="Wind">8.0</td>
+<td class="gt_row gt_right" headers="Temp">72</td>
+<td class="gt_row gt_right" headers="Month">5</td>
+<td class="gt_row gt_right" headers="Day">2</td>
+<td class="gt_row gt_left" headers="Month Name">May</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="Ozone" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">12</td>
-<td class="gt_row gt_right" headers="Solar.R" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">149</td>
-<td class="gt_row gt_right" headers="Wind" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">12.6</td>
-<td class="gt_row gt_right" headers="Temp" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">74</td>
-<td class="gt_row gt_right" headers="Month" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">5</td>
-<td class="gt_row gt_right" headers="Day" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">3</td>
-<td class="gt_row gt_left" headers="Month Name" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">May</td>
+<td class="gt_row gt_right" headers="Ozone">12</td>
+<td class="gt_row gt_right" headers="Solar.R">149</td>
+<td class="gt_row gt_right" headers="Wind">12.6</td>
+<td class="gt_row gt_right" headers="Temp">74</td>
+<td class="gt_row gt_right" headers="Month">5</td>
+<td class="gt_row gt_right" headers="Day">3</td>
+<td class="gt_row gt_left" headers="Month Name">May</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="Ozone" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">18</td>
-<td class="gt_row gt_right" headers="Solar.R" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">313</td>
-<td class="gt_row gt_right" headers="Wind" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">11.5</td>
-<td class="gt_row gt_right" headers="Temp" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">62</td>
-<td class="gt_row gt_right" headers="Month" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">5</td>
-<td class="gt_row gt_right" headers="Day" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">4</td>
-<td class="gt_row gt_left" headers="Month Name" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">May</td>
+<td class="gt_row gt_right" headers="Ozone">18</td>
+<td class="gt_row gt_right" headers="Solar.R">313</td>
+<td class="gt_row gt_right" headers="Wind">11.5</td>
+<td class="gt_row gt_right" headers="Temp">62</td>
+<td class="gt_row gt_right" headers="Month">5</td>
+<td class="gt_row gt_right" headers="Day">4</td>
+<td class="gt_row gt_left" headers="Month Name">May</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_right" headers="Ozone" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">NA</td>
-<td class="gt_row gt_right" headers="Solar.R" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">NA</td>
-<td class="gt_row gt_right" headers="Wind" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">14.3</td>
-<td class="gt_row gt_right" headers="Temp" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">56</td>
-<td class="gt_row gt_right" headers="Month" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">5</td>
-<td class="gt_row gt_right" headers="Day" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">5</td>
-<td class="gt_row gt_left" headers="Month Name" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">May</td>
+<td class="gt_row gt_right" headers="Ozone">NA</td>
+<td class="gt_row gt_right" headers="Solar.R">NA</td>
+<td class="gt_row gt_right" headers="Wind">14.3</td>
+<td class="gt_row gt_right" headers="Temp">56</td>
+<td class="gt_row gt_right" headers="Month">5</td>
+<td class="gt_row gt_right" headers="Day">5</td>
+<td class="gt_row gt_left" headers="Month Name">May</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_right" headers="Ozone" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">28</td>
-<td class="gt_row gt_right" headers="Solar.R" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">NA</td>
-<td class="gt_row gt_right" headers="Wind" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">14.9</td>
-<td class="gt_row gt_right" headers="Temp" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">66</td>
-<td class="gt_row gt_right" headers="Month" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">5</td>
-<td class="gt_row gt_right" headers="Day" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">6</td>
-<td class="gt_row gt_left" headers="Month Name" style="border-left-width: 2px; border-left-style: solid; border-left-color: #ffffff; border-right-width: 2px; border-right-style: solid; border-right-color: #ffffff; border-top-width: 2px; border-top-style: solid; border-top-color: #ffffff; border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: #ffffff">May</td>
+<td class="gt_row gt_right" headers="Ozone">28</td>
+<td class="gt_row gt_right" headers="Solar.R">NA</td>
+<td class="gt_row gt_right" headers="Wind">14.9</td>
+<td class="gt_row gt_right" headers="Temp">66</td>
+<td class="gt_row gt_right" headers="Month">5</td>
+<td class="gt_row gt_right" headers="Day">6</td>
+<td class="gt_row gt_left" headers="Month Name">May</td>
 </tr>
 </tbody>
 </table>
 
-</div>
-</div>
-</div>
-</section>
-<section id="basic-figures" class="slide level2">
-<h2>Basic Figures</h2>
-<p><a href="https://github.com/AAGI-AUS/AAGIThemes">{AAGIThemes}</a> also provides support for theming basic figures in R, for example.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(AAGIThemes)</span>
-<span id="cb4-2"><a></a><span class="fu">plot_aagi</span>(pressure)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="template-revealjs_files/figure-revealjs/graphics-figure-1.png" width="960"></p>
-</figure>
 </div>
 </div>
 </div>
@@ -831,42 +804,32 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
 </div></aside></section>
 <section id="figures-with-ggplot2" class="slide level2">
 <h2>Figures with {ggplot2}</h2>
-<p><a href="https://github.com/AAGI-AUS/AAGIThemes">{AAGIThemes}</a> also provides support for theming <a href="https://ggplot2.tidyverse.org">{ggplot2}</a> outputs in R, for example.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co">#Prepare data</span></span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a><span class="fu">library</span>(gapminder)</span>
-<span id="cb5-4"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb5-5"><a></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-6"><a></a><span class="fu">library</span>(AAGIThemes)</span>
-<span id="cb5-7"><a></a></span>
-<span id="cb5-8"><a></a>facet <span class="ot">&lt;-</span> gapminder <span class="sc">|&gt;</span></span>
-<span id="cb5-9"><a></a>  <span class="fu">filter</span>(continent <span class="sc">!=</span> <span class="st">"Americas"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-10"><a></a>  <span class="fu">group_by</span>(continent, year) <span class="sc">|&gt;</span></span>
-<span id="cb5-11"><a></a>  <span class="fu">summarise</span>(<span class="at">pop =</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(pop)))</span>
-<span id="cb5-12"><a></a><span class="co">#&gt; `summarise()` has grouped output by 'continent'. You can override using the</span></span>
-<span id="cb5-13"><a></a><span class="co">#&gt; `.groups` argument.</span></span>
-<span id="cb5-14"><a></a></span>
-<span id="cb5-15"><a></a>col_values <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb5-16"><a></a>  AAGIPalettes<span class="sc">::</span><span class="fu">colour_as_hex</span>(<span class="st">"AAGI Teal"</span>),</span>
-<span id="cb5-17"><a></a>  AAGIPalettes<span class="sc">::</span><span class="fu">colour_as_hex</span>(<span class="st">"AAGI Green"</span>),</span>
-<span id="cb5-18"><a></a>  AAGIPalettes<span class="sc">::</span><span class="fu">colour_as_hex</span>(<span class="st">"AAGI Yellow"</span>),</span>
-<span id="cb5-19"><a></a>  AAGIPalettes<span class="sc">::</span><span class="fu">colour_as_hex</span>(<span class="st">"AAGI Blue"</span>)</span>
-<span id="cb5-20"><a></a>)</span>
-<span id="cb5-21"><a></a></span>
-<span id="cb5-22"><a></a><span class="co">#Make plot</span></span>
-<span id="cb5-23"><a></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb5-24"><a></a>  <span class="fu">geom_area</span>(<span class="at">data =</span> facet, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> pop, <span class="at">fill =</span> continent)) <span class="sc">+</span></span>
-<span id="cb5-25"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> col_values) <span class="sc">+</span></span>
-<span id="cb5-26"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> continent, <span class="at">ncol =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb5-27"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2000000000</span>, <span class="dv">4000000000</span>),</span>
-<span id="cb5-28"><a></a>                    <span class="at">labels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="st">"2bn"</span>, <span class="st">"4bn"</span>)) <span class="sc">+</span></span>
-<span id="cb5-29"><a></a>  <span class="fu">theme_aagi</span>() <span class="sc">+</span></span>
-<span id="cb5-30"><a></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>,</span>
-<span id="cb5-31"><a></a>            <span class="at">linewidth =</span> <span class="dv">1</span>,</span>
-<span id="cb5-32"><a></a>            <span class="at">colour =</span> <span class="st">"#474747"</span>) <span class="sc">+</span></span>
-<span id="cb5-33"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>, <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb5-34"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Asia's rapid growth"</span>, <span class="at">subtitle =</span> <span class="st">"Population growth by continent, 1952-2007"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-label="1"></a><span class="co">#Prepare data</span></span>
+<span id="cb4-2"><a aria-label="2"></a></span>
+<span id="cb4-3"><a aria-label="3"></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb4-4"><a aria-label="4"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb4-5"><a aria-label="5"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-6"><a aria-label="6"></a></span>
+<span id="cb4-7"><a aria-label="7"></a>facet <span class="ot">&lt;-</span> gapminder <span class="sc">|&gt;</span></span>
+<span id="cb4-8"><a aria-label="8"></a>  <span class="fu">filter</span>(continent <span class="sc">!=</span> <span class="st">"Americas"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-9"><a aria-label="9"></a>  <span class="fu">group_by</span>(continent, year) <span class="sc">|&gt;</span></span>
+<span id="cb4-10"><a aria-label="10"></a>  <span class="fu">summarise</span>(<span class="at">pop =</span> <span class="fu">sum</span>(<span class="fu">as.numeric</span>(pop)))</span>
+<span id="cb4-11"><a aria-label="11"></a></span>
+<span id="cb4-12"><a aria-label="12"></a><span class="co">#Make plot</span></span>
+<span id="cb4-13"><a aria-label="13"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-14"><a aria-label="14"></a>  <span class="fu">geom_area</span>(<span class="at">data =</span> facet, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> pop, <span class="at">fill =</span> continent)) <span class="sc">+</span></span>
+<span id="cb4-15"><a aria-label="15"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>continent, <span class="at">ncol =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb4-16"><a aria-label="16"></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb4-17"><a aria-label="17"></a>    <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">2000000000</span>, <span class="dv">4000000000</span>),</span>
+<span id="cb4-18"><a aria-label="18"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="st">"2bn"</span>, <span class="st">"4bn"</span>)</span>
+<span id="cb4-19"><a aria-label="19"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-20"><a aria-label="20"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">colour =</span> <span class="st">"#474747"</span>) <span class="sc">+</span></span>
+<span id="cb4-21"><a aria-label="21"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>, <span class="at">axis.text.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb4-22"><a aria-label="22"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-23"><a aria-label="23"></a>    <span class="at">title =</span> <span class="st">"Asia's rapid growth"</span>,</span>
+<span id="cb4-24"><a aria-label="24"></a>    <span class="at">subtitle =</span> <span class="st">"Population growth by continent, 1952-2007"</span></span>
+<span id="cb4-25"><a aria-label="25"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </div>
 <img data-src="template-revealjs_files/figure-revealjs/ggplot2-figure-1.png" width="960" class="r-stretch"></section>
@@ -882,12 +845,6 @@ Adam Sparks <a href="https://orcid.org/0000-0002-0061-8359" class="quarto-title-
 <section id="more-information" class="slide level2">
 <h2>More Information</h2>
 <p>You can learn more about controlling the appearance of revealjs output here: <a href="https://quarto.org/docs/presentations/revealjs/" class="uri">https://quarto.org/docs/presentations/revealjs/</a></p>
-<!-- This background won't show properly in the example rendered slide, but when used with `quarto use template AAGI-AUS/AAGIQuarto`
-you will have the closing slide display the same image as the title slide under "Thank You" (or the H1 text of your choosing)
--->
-</section>
-<section id="thank-you" class="title-slide slide level1 center" data-background-image="_extensions/AAGI-AUS/aagi/assets/title-slide-main.png" data-background-size="1050px auto" data-background-position="50% 85%">
-<h1>Thank You</h1>
 <!-- Uncomment if you have a bibliography
 ## References 
 -->
@@ -896,7 +853,7 @@ you will have the closing slide display the same image as the title slide under 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="_extensions/AAGI-AUS/aagi/assets/aagi-logo.svg" class="slide-logo"></p>
+<p><img src="../site_libs/quarto-contrib/quarto-project/CCDM-CBADA/cbada/assets/ccdm-logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
@@ -909,7 +866,6 @@ you will have the closing slide display the same image as the title slide under 
   <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -931,8 +887,7 @@ you will have the closing slide display the same image as the title slide under 
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1103,7 +1058,7 @@ you will have the closing slide display the same image as the title slide under 
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1220,7 +1175,7 @@ you will have the closing slide display the same image as the title slide under 
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp("https:\/\/AAGI-AUS\.github\.io\/AAGIQuarto\/");
+            var filterRegex = new RegExp("https:\/\/CCDM-CBADA\.github\.io\/CBADAQuarto\/");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

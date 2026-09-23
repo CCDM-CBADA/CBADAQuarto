@@ -1,1 +1,1 @@
-Sitemap: https://AAGI-AUS.github.io/AAGIQuarto/sitemap.xml
+Sitemap: https://CCDM-CBADA.github.io/CBADAQuarto/sitemap.xml

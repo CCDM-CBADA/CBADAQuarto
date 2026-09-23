@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Release Notes – AAGIQuarto</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -32,15 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b524e5e10053bf5bea4dd5b3071a8bf3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3a2afb74665eb1f4bf935d8d5fcdd0e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6940db61ceaea47940e07e264df18c42.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-52c8769c3e4862a4299ed64854f5a133.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -98,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">AAGIQuarto</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/AAGI-AUS/AAGIQuarto" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://github.com/CCDM-CBADA/CBADAQuarto" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -142,35 +147,12 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="./demos/assets/aagi-logo.svg" class="img-fluid"></p>
-</div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">0.1.4 2025-07-29</a>
-  <ul class="collapse">
-  <li><a href="#minor-changes" id="toc-minor-changes" class="nav-link" data-scroll-target="#minor-changes">Minor changes</a></li>
-  </ul></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0.1.3 2025-07-29</a>
-  <ul class="collapse">
-  <li><a href="#minor-changes-1" id="toc-minor-changes-1" class="nav-link" data-scroll-target="#minor-changes-1">Minor changes</a></li>
-  <li><a href="#bug-fixes" id="toc-bug-fixes" class="nav-link" data-scroll-target="#bug-fixes">Bug fixes</a></li>
-  </ul></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">0.1.2 2024-12-11</a>
-  <ul class="collapse">
-  <li><a href="#minor-changes-2" id="toc-minor-changes-2" class="nav-link" data-scroll-target="#minor-changes-2">Minor changes</a></li>
-  <li><a href="#bug-fixes-1" id="toc-bug-fixes-1" class="nav-link" data-scroll-target="#bug-fixes-1">Bug fixes</a></li>
-  </ul></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">0.1.1 2024-10-28</a>
-  <ul class="collapse">
-  <li><a href="#minor-changes-3" id="toc-minor-changes-3" class="nav-link" data-scroll-target="#minor-changes-3">Minor Changes</a></li>
-  </ul></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">0.1.0 2024-09-26</a>
-  <ul class="collapse">
-  <li><a href="#major-changes" id="toc-major-changes" class="nav-link" data-scroll-target="#major-changes">Major Changes</a></li>
-  </ul></li>
+  <li><a href="#unreleased" id="toc-unreleased" class="nav-link active" data-scroll-target="#unreleased">0.0.1 (unreleased)</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/AAGI-AUS/AAGIQuarto/edit/main/release-notes.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/AAGI-AUS/AAGIQuarto/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -191,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">November 19, 2025</p>
+      <p class="date-modified">September 23, 2026</p>
     </div>
   </div>
     
@@ -202,73 +184,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="section" class="level1">
-<h1>0.1.4 2025-07-29</h1>
-<section id="minor-changes" class="level2">
-<h2 class="anchored" data-anchor-id="minor-changes">Minor changes</h2>
+<section id="unreleased" class="level1">
+<h1>0.0.1 (unreleased)</h1>
 <ul>
-<li>More polishing missed in last round, <em>e.g.</em>, duplicated labels, etc.</li>
-</ul>
-</section>
-</section>
-<section id="section-1" class="level1">
-<h1>0.1.3 2025-07-29</h1>
-<section id="minor-changes-1" class="level2">
-<h2 class="anchored" data-anchor-id="minor-changes-1">Minor changes</h2>
-<ul>
-<li><p>Set language in Word document templates to en-AU</p></li>
-<li><p>Enhanced installation instructions</p></li>
-<li><p>Adds header and footer to full length reports</p></li>
-<li><p>Install AAGI R packages using R-Universe methods</p></li>
-</ul>
-</section>
-<section id="bug-fixes" class="level2">
-<h2 class="anchored" data-anchor-id="bug-fixes">Bug fixes</h2>
-<ul>
-<li><p>Ensure <code>\usepackage{hyperref}</code> is called</p></li>
-<li><p>Spelling corrections</p></li>
-</ul>
-</section>
-</section>
-<section id="section-2" class="level1">
-<h1>0.1.2 2024-12-11</h1>
-<section id="minor-changes-2" class="level2">
-<h2 class="anchored" data-anchor-id="minor-changes-2">Minor changes</h2>
-<ul>
-<li>Adds example using {flextable} in AAGI Short Report PDF format document</li>
-</ul>
-</section>
-<section id="bug-fixes-1" class="level2">
-<h2 class="anchored" data-anchor-id="bug-fixes-1">Bug fixes</h2>
-<ul>
-<li>Fixes bug in AAGI Short Report PDF format wherein using {flextable} caused the PDF to not compile properly (at all)</li>
-</ul>
-</section>
-</section>
-<section id="section-3" class="level1">
-<h1>0.1.1 2024-10-28</h1>
-<section id="minor-changes-3" class="level2">
-<h2 class="anchored" data-anchor-id="minor-changes-3">Minor Changes</h2>
-<ul>
-<li><p>Add example outputs for reports using AAGI themes for graphs and tables</p></li>
-<li><p>Add starter pack instructions for easily creating an AAGI file rather than setting up your own YAML</p></li>
-<li><p>Fixed links in README</p></li>
-</ul>
-</section>
-</section>
-<section id="section-4" class="level1">
-<h1>0.1.0 2024-09-26</h1>
-<section id="major-changes" class="level2">
-<h2 class="anchored" data-anchor-id="major-changes">Major Changes</h2>
-<ul>
-<li>This is the first stable release with support for MS Word, PowerPoint, revealjs and long and short report PDF outputs with LaTeX</li>
+<li>Port from AAGIQuarto to CBADAQuarto</li>
 </ul>
 
 
 </section>
-</section>
 
-<p><img src="./demos/assets/Partners.svg" class="img-fluid"></p></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -342,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/AAGI-AUS\.github\.io\/AAGIQuarto\/");
+        var filterRegex = new RegExp("https:\/\/CCDM-CBADA\.github\.io\/CBADAQuarto\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

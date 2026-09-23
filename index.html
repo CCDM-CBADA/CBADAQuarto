@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>AAGI Quarto Templates Extension – AAGIQuarto</title>
+<title>CBADA Quarto Templates Extension – AAGIQuarto</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -67,15 +73,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b524e5e10053bf5bea4dd5b3071a8bf3.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3a2afb74665eb1f4bf935d8d5fcdd0e1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6940db61ceaea47940e07e264df18c42.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-52c8769c3e4862a4299ed64854f5a133.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -107,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -133,7 +138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="sidebar-title mb-0 py-0">
       <a href="./">AAGIQuarto</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/AAGI-AUS/AAGIQuarto" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+    <a href="https://github.com/CCDM-CBADA/CBADAQuarto" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
@@ -177,16 +182,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="./demos/assets/aagi-logo.svg" class="img-fluid"></p>
-</div></div>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AAGI Quarto Templates Extension</h1>
+<h1 class="title">CBADA Quarto Templates Extension</h1>
 </div>
 
 
@@ -203,26 +205,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="aagi-extension-for-quarto" class="level1">
-<h1>AAGI Extension For Quarto</h1>
-<p>The <code>AAGIQuarto</code> Quarto extension provides official Analytics for the Australian Grains Industry (AAGI) project theming for Quarto documents. If you prefer to use R Markdown, please see the excellent <a href="https://github.com/AAGI-AUS/AAGITemplates">{AAGITemplates}</a> package, which <code>AAGIQuarto</code> has feature parity with and shares the same underlying AAGI templates for the individual AAGI documents so that the outputs should be similar if not identical between these two tools. <code>AAGIQuarto</code> was developed to provide next-generation literate programming tools for AAGI’s reporting and presentation needs that support R, Python and Julia languages.</p>
+<section id="ccdm-extension-for-quarto" class="level1">
+<h1>CCDM Extension For Quarto</h1>
+<p>The <code>CCDMQuarto</code> Quarto extension provides official Analytics for the Australian Grains Industry (CCDM) project theming for Quarto documents. If you prefer to use R Markdown, please see the excellent <a href="https://github.com/CCDM-AUS/CCDMTemplates">{CCDMTemplates}</a> package, which <code>CCDMQuarto</code> has feature parity with and shares the same underlying CCDM templates for the individual CCDM documents so that the outputs should be similar if not identical between these two tools. <code>CCDMQuarto</code> was developed to provide next-generation literate programming tools for CCDM’s reporting and presentation needs that support R, Python and Julia languages.</p>
 <section id="template-formats" class="level2">
 <h2 class="anchored" data-anchor-id="template-formats">Template Formats</h2>
 <p>See the included template and demo file for each format here:</p>
 <section id="report-formats" class="level3">
 <h3 class="anchored" data-anchor-id="report-formats">Report Formats</h3>
 <ul>
-<li><p><strong>AAGI PDF Short Report:</strong> <a href="https://aagi-aus.github.io/AAGIQuarto/demos/template-pdf-short-report+short+report.pdf">AAGI PDF Short Report Demo</a> (<a href="https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-pdf-report.qmd">Source</a>)</p></li>
-<li><p><strong>AAGI PDF Report:</strong> <a href="https://aagi-aus.github.io/AAGIQuarto/demos/template-pdf-report+report.pdf">AAGI PDF Report Demo</a> (<a href="https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-pdf-report.qmd">Source</a>)</p></li>
-<li><p><strong>AAGI Word Document Report:</strong> <a href="https://aagi-aus.github.io/AAGIQuarto/demos/template-docx-report.docx">AAGI Word Document Demo</a> (<a href="https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-docx-report.qmd">Source</a>)</p></li>
-<li><p><strong>AAGI Word Document Short Report:</strong> <a href="demos/template-docx-short-report.docx">AAGI Word Document Short Demo</a> (<a href="https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-docx-short-report.qmd">Source</a>)</p></li>
+<li><p><strong>CCDM PDF Short Report:</strong> <a href="https://cbada-aus.github.io/CCDMQuarto/demos/template-pdf-short-report+short+report.pdf">CCDM PDF Short Report Demo</a> (<a href="https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-pdf-report.qmd">Source</a>)</p></li>
+<li><p><strong>CCDM PDF Report:</strong> <a href="https://cbada-aus.github.io/CCDMQuarto/demos/template-pdf-report+report.pdf">CCDM PDF Report Demo</a> (<a href="https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-pdf-report.qmd">Source</a>)</p></li>
+<li><p><strong>CCDM Word Document Report:</strong> <a href="https://cbada-aus.github.io/CCDMQuarto/demos/template-docx-report.docx">CCDM Word Document Demo</a> (<a href="https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-docx-report.qmd">Source</a>)</p></li>
+<li><p><strong>CCDM Word Document Short Report:</strong> <a href="demos/template-docx-short-report.docx">CCDM Word Document Short Demo</a> (<a href="https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-docx-short-report.qmd">Source</a>)</p></li>
 </ul>
 </section>
 <section id="presentation-formats" class="level3">
 <h3 class="anchored" data-anchor-id="presentation-formats">Presentation Formats</h3>
 <ul>
-<li><p><strong>AAGI revealjs Presentation:</strong> <a href="https://aagi-aus.github.io/AAGIQuarto/demos/template-revealjs.html#/title-slide">AAGI revealjs Slide Demo</a> (<a href="https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-revealjs.qmd">Source</a>) (this is an <code>AAGIQuarto</code> exclusive)</p></li>
-<li><p><strong>AAGI PowerPoint Presentation:</strong> <a href="https://aagi-aus.github.io/AAGIQuarto/demos/template-pptx.pptx">AAGI PPT Slide Demo</a> (<a href="https://github.com/AAGI-AUS/AAGIQuarto/blob/main/docs/demos/template-pptx.qmd">Source</a>)</p></li>
+<li><p><strong>CCDM revealjs Presentation:</strong> <a href="https://cbada-aus.github.io/CCDMQuarto/demos/template-revealjs.html#/title-slide">CCDM revealjs Slide Demo</a> (<a href="https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-revealjs.qmd">Source</a>) (this is an <code>CCDMQuarto</code> exclusive)</p></li>
+<li><p><strong>CCDM PowerPoint Presentation:</strong> <a href="https://cbada-aus.github.io/CCDMQuarto/demos/template-pptx.pptx">CCDM PPT Slide Demo</a> (<a href="https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-pptx.qmd">Source</a>)</p></li>
 </ul>
 </section>
 </section>
@@ -237,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Use your terminal or command prompt to run the install commands. Alternatively, if you use RStudio or VS Code(ium)/Positron you can use the terminal emulator, but not the R/Python/Julia REPL (read-eval-print-loop console), in those integrated development environments (IDE) to run the commands. Or, if you prefer and you are using Windows, you may need to install the Windows Subsystem for Linux (WSL) to use the <code>bash</code> command. For more information, see <a href="https://docs.microsoft.com/en-us/windows/wsl/install">Microsoft’s documentation</a>.</p>
 <p>You can obtain a copy of the extension by using the following commands in your Bash terminal (CLI):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> your_quarto_project_folder</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template AAGI-AUS/AAGIQuarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use template CCDM-CBADA/CBADAQuarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This will install the extension and create an example qmd file that you can use as a starting place for your LaTeX PDF, MS Word .docx or reveal.js presentation slides.</p>
 </section>
 </section>
@@ -246,34 +248,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For documentation on using reveal.js slides in Quarto, please see, <a href="https://quarto.org/docs/presentations/revealjs/" class="uri">https://quarto.org/docs/presentations/revealjs/</a>.</p>
 <p>To use the formatted output, save your qmd file into the extension folder that you created using the command above. Then, in the output format use:</p>
 <ul>
-<li><code>aagi-docx+report</code>, for a full length MS Word report</li>
-<li><code>aagi-docx+short+report</code>, for a short MS Word report</li>
-<li><code>aagi-pptx</code>, for MS PPT output</li>
-<li><code>aagi-revealjs</code>, for a revealjs presentation</li>
-<li><code>aagi-pdf+report</code>, for a full length PDF report</li>
-<li><code>aagi-pdf+short+report</code>, for a short PDF report</li>
+<li><code>cbada-docx+report</code>, for a full length MS Word report</li>
+<li><code>cbada-docx+short+report</code>, for a short MS Word report</li>
+<li><code>cbada-pptx</code>, for MS PPT output</li>
+<li><code>cbada-revealjs</code>, for a revealjs presentation</li>
+<li><code>cbada-pdf+report</code>, for a full length PDF report</li>
+<li><code>cbada-pdf+short+report</code>, for a short PDF report</li>
 </ul>
 <section id="template" class="level3">
 <h3 class="anchored" data-anchor-id="template">Template</h3>
 <p>If you use the Bash command above to install the extension and create a sub directory following the command prompt, there will be a .qmd file created using the name that you input for the sub directory.</p>
-<p>By default, these templates use <a href="https://aagi-aus.github.io/AAGIThemes/">{AAGIThemes}</a> and <a href="https://aagi-aus.github.io/AAGIPalettes/">{AAGIPalettes}</a> for R graphical and tabular outputs.</p>
+<p>By default, these templates use <a href="https://cbada-aus.github.io/CCDMThemes/">{CCDMThemes}</a> and <a href="https://cbada-aus.github.io/CCDMPalettes/">{CCDMPalettes}</a> for R graphical and tabular outputs.</p>
 </section>
 </section>
 <section id="updating" class="level2">
 <h2 class="anchored" data-anchor-id="updating">Updating</h2>
 <p>As we continue to improve this extension through bug fixes or adding new functionality, you can update it easily like so:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> your_quarto_project_folder</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> update AAGI-AUS/AAGIQuarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> update CCDM-CBADA/CBADAQuarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="logo-rights" class="level2">
 <h2 class="anchored" data-anchor-id="logo-rights">Logo Rights</h2>
-<p>The logo of this project and the AAGI strategic partners do not come under MIT License. The Analytics for the Australian Grains Industry (AAGI) project retains full rights to the AAGI logo and the Grains Research and Development Corporation (GRDC) and strategic partners, Curtin University, the University of Queensland and Adelaide University, retain full rights to their own logos, respectively.</p>
+<p>The logo of this project and the CCDM strategic partners do not come under MIT License. The Analytics for the Australian Grains Industry (CCDM) project retains full rights to the CCDM logo and the Grains Research and Development Corporation (GRDC) and strategic partners, Curtin University, the University of Queensland and Adelaide University, retain full rights to their own logos, respectively.</p>
 
 
 </section>
 </section>
 
-<p><img src="./demos/assets/Partners.svg" class="img-fluid"></p></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -347,7 +349,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/AAGI-AUS\.github\.io\/AAGIQuarto\/");
+        var filterRegex = new RegExp("https:\/\/CCDM-CBADA\.github\.io\/CBADAQuarto\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
