@@ -55,12 +55,12 @@ jobs:
         - name: Add extension directly into demos
           working-directory: ./docs
           run: |
-            quarto add AAGI-AUS/AAGIQuarto --no-prompt
+            quarto add CCDM-CBADA/CBADAQuarto --no-prompt
 
         - name: Copy fonts from extension to docs
           run: |
             mkdir -p ./docs/fonts
-            cp -r ./docs/_extensions/AAGI-AUS/AAGIQuarto/resources/fonts/* ./docs/fonts/
+            cp -r ./docs/_extensions/CCDM-CBADA/CBADAQuarto/resources/fonts/* ./docs/fonts/
 
         - name: Publish to GitHub Pages (and render)
           uses: quarto-dev/quarto-actions/publish@v2
