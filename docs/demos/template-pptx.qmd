@@ -13,20 +13,14 @@ format:
 if (!require(pak)) {
   install.packages("pak", dependencies = TRUE)
 }
+
 if (!require(flextable)) {
   pak::pak("flextable", dependencies = TRUE)
 }
 
-if (!require(gapminder)) {
-  pak::pak("gapminder", dependencies = TRUE)
-}
-
-if (!require(gt)) {
-  pak::pak("gt", dependencies = TRUE)
-}
-
-library(ggplot2)
-```
+if (!require(dplyr)) {
+  pak::pak("flextable", dependencies = TRUE)
+}```
 
 ## A CCDM pptx Theme for Quarto
 
@@ -56,60 +50,4 @@ flex_tab <- flextable(
 ) |>
   autofit()
 flex_tab
-```
-
-## Figures with {ggplot2}
-
-```{r}
-#| label: ggplot2-figure
-#| message: false
-
-#Prepare data
-
-library(gapminder)
-library(dplyr)
-library(ggplot2)
-
-facet <- gapminder |>
-  filter(continent != "Americas") |>
-  group_by(continent, year) |>
-  summarise(pop = sum(as.numeric(pop)))
-#> `summarise()` has grouped output by 'continent'. You can override using the
-#> `.groups` argument.
-
-#Make plot
-ggplot() +
-  geom_area(data = facet, aes(x = year, y = pop, fill = continent)) +
-  scale_fill_manual(values = col_values) +
-  facet_wrap(~continent, ncol = 5) +
-  scale_y_continuous(
-    breaks = c(0, 2000000000, 4000000000),
-    labels = c(0, "2bn", "4bn")
-  ) +
-  geom_hline(yintercept = 0, linewidth = 1, colour = "#474747") +
-  theme(legend.position = "none", axis.text.x = element_blank()) +
-  labs(
-    title = "Asia's rapid growth",
-    subtitle = "Population growth by continent, 1952-2007"
-  )
-```
-
-## Slides With Columns
-
-::: columns
-::::: {.column width="50%"}
-This is a column on the left.
-:::::
-
-::::: {.column width="50%"}
-This is a column on the right.
-:::::
-:::
-
-# Thank You
-
-```{=html}
-<!-- Uncomment if you have a bibliography
-## References
--->
 ```
