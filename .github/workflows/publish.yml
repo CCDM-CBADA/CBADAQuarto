@@ -59,7 +59,8 @@ jobs:
 
         - name: Copy fonts from extension to docs
           run: |
-            cp -r ./docs/demos/_extensions/AAGI-AUS/AAGIQuarto/resources/fonts/* ./docs/fonts/
+            mkdir -p ./docs/fonts
+            cp -r ./docs/_extensions/AAGI-AUS/AAGIQuarto/resources/fonts/* ./docs/fonts/
 
         - name: Publish to GitHub Pages (and render)
           uses: quarto-dev/quarto-actions/publish@v2
