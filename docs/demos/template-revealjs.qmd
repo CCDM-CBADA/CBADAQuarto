@@ -87,13 +87,10 @@ facet <- gapminder |>
   filter(continent != "Americas") |>
   group_by(continent, year) |>
   summarise(pop = sum(as.numeric(pop)))
-#> `summarise()` has grouped output by 'continent'. You can override using the
-#> `.groups` argument.
 
 #Make plot
 ggplot() +
   geom_area(data = facet, aes(x = year, y = pop, fill = continent)) +
-  scale_fill_manual(values = col_values) +
   facet_wrap(~continent, ncol = 5) +
   scale_y_continuous(
     breaks = c(0, 2000000000, 4000000000),
