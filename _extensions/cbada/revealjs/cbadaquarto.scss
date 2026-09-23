@@ -63,14 +63,13 @@ $presentation-h4-font-size: 1.0em;
 // ---------------------------------------------------------------------------
 // Font-face declarations
 // ---------------------------------------------------------------------------
-// Font files live at _extensions/cbada/revealjs/fonts/
-// Compiled CSS is at template_files/libs/revealjs/dist/theme/
-// Relative path up 5 levels then back: ../../../../../_extensions/cbada/revealjs/fonts/
+// Font files live beside this SCSS in revealjs/fonts/
+// Use source-relative paths so resolution does not depend on render working directory.
 @font-face {
   font-family: "Effra";
   src: local("Effra"),
-       url("../../../../../_extensions/cbada/revealjs/fonts/Effra-Regular.woff2") format("woff2"),
-       url("../../../../../_extensions/cbada/revealjs/fonts/Effra-Regular.woff") format("woff");
+       url("fonts/Effra-Regular.woff2") format("woff2"),
+       url("fonts/Effra-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -78,8 +77,8 @@ $presentation-h4-font-size: 1.0em;
 @font-face {
   font-family: "Effra";
   src: local("Effra Medium"),
-       url("../../../../../_extensions/cbada/revealjs/fonts/Effra-Medium.woff2") format("woff2"),
-       url("../../../../../_extensions/cbada/revealjs/fonts/Effra-Medium.woff") format("woff");
+       url("fonts/Effra-Medium.woff2") format("woff2"),
+       url("fonts/Effra-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -87,8 +86,8 @@ $presentation-h4-font-size: 1.0em;
 @font-face {
   font-family: "Effra";
   src: local("Effra Bold"),
-       url("../../../../../_extensions/cbada/revealjs/fonts/Effra-Bold.woff2") format("woff2"),
-       url("../../../../../_extensions/cbada/revealjs/fonts/Effra-Bold.woff") format("woff");
+       url("fonts/Effra-Bold.woff2") format("woff2"),
+       url("fonts/Effra-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
