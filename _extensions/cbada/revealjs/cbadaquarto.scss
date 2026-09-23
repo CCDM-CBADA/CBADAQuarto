@@ -68,27 +68,8 @@ $presentation-h4-font-size: 1.0em;
 @font-face {
   font-family: "Effra";
   src: local("Effra"),
-       url("fonts/Effra-Regular.woff2") format("woff2"),
-       url("fonts/Effra-Regular.woff") format("woff");
+       url("fonts/Effra-Regular.woff2") format("woff2");
   font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Effra";
-  src: local("Effra Medium"),
-       url("fonts/Effra-Medium.woff2") format("woff2"),
-       url("fonts/Effra-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Effra";
-  src: local("Effra Bold"),
-       url("fonts/Effra-Bold.woff2") format("woff2"),
-       url("fonts/Effra-Bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -98,6 +79,7 @@ $presentation-h4-font-size: 1.0em;
 // ---------------------------------------------------------------------------
 .reveal {
   font-family: $font-family-sans-serif;
+  font-synthesis: weight;
   color: $dark-text;
 
   .slides { text-align: left; }
