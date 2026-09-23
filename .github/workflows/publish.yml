@@ -35,7 +35,6 @@ jobs:
               any::xml2
               any::ggplot2
 
-      # install ms-corefonts for Arial font since Proxima Nova isn't available
         - name: "Install ms-corefonts"
           run: |
             echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
@@ -50,7 +49,6 @@ jobs:
           uses: quarto-dev/quarto-actions/setup@v2
           with:
             version: "release"
-            tinytex: true # required for PDF reports
 
         - name: Add extension directly into demos
           working-directory: ./docs
@@ -60,7 +58,7 @@ jobs:
         - name: Copy fonts from extension to docs
           run: |
             mkdir -p ./docs/fonts
-            cp -r ./docs/_extensions/CCDM-CBADA/CBADAQuarto/resources/fonts/* ./docs/fonts/
+            cp -r ./docs/_extensions/CCDM-CBADA/cbaba/CBADAQuarto/revealjs/fonts/* ./docs/fonts/
 
         - name: Publish to GitHub Pages (and render)
           uses: quarto-dev/quarto-actions/publish@v2
