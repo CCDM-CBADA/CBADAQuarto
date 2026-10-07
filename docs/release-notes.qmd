@@ -2,11 +2,12 @@
 title: "Release Notes"
 date-modified: last-modified
 engine: markdown
-format: 
+format:
   html:
     toc: true
 ---
 
 # 0.0.1 (unreleased)
 
-* Port from AAGIQuarto to CBADAQuarto
+- Port from AAGIQuarto to CBADAQuarto
+- Port revealjs theme from the CCDM Powerpoint "Data" style

@@ -5,31 +5,11 @@ format:
     toc: false
 ---
 
-# CCDM Extension For Quarto
+# CCDM Extension For Quarto Presentations
 
-The `CCDMQuarto` Quarto extension provides official Analytics for the Australian Grains Industry (CCDM) project theming for Quarto documents.
-If you prefer to use R Markdown, please see the excellent [{CCDMTemplates}](https://github.com/CCDM-AUS/CCDMTemplates) package, which `CCDMQuarto` has feature parity with and shares the same underlying CCDM templates for the individual CCDM documents so that the outputs should be similar if not identical between these two tools.
-`CCDMQuarto` was developed to provide next-generation literate programming tools for CCDM's reporting and presentation needs that support R, Python and Julia languages.
+The `CCDMQuarto` Quarto extension provides official Analytics for the Australian Grains Industry (CCDM) project theming for Quarto revealjs presentations.
 
-## Template Formats
-
-See the included template and demo file for each format here:
-
-### Report Formats
-
-- **CCDM PDF Short Report:** [CCDM PDF Short Report Demo](https://cbada-aus.github.io/CCDMQuarto/demos/template-pdf-short-report+short+report.pdf) ([Source](https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-pdf-report.qmd))
-
-- **CCDM PDF Report:** [CCDM PDF Report Demo](https://cbada-aus.github.io/CCDMQuarto/demos/template-pdf-report+report.pdf) ([Source](https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-pdf-report.qmd))
-
-- **CCDM Word Document Report:** [CCDM Word Document Demo](https://cbada-aus.github.io/CCDMQuarto/demos/template-docx-report.docx) ([Source](https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-docx-report.qmd))
-
-- **CCDM Word Document Short Report:** [CCDM Word Document Short Demo](demos/template-docx-short-report.docx) ([Source](https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-docx-short-report.qmd))
-
-### Presentation Formats
-
-- **CCDM revealjs Presentation:** [CCDM revealjs Slide Demo](https://cbada-aus.github.io/CCDMQuarto/demos/template-revealjs.html#/title-slide) ([Source](https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-revealjs.qmd)) (this is an `CCDMQuarto` exclusive)
-
-- **CCDM PowerPoint Presentation:** [CCDM PPT Slide Demo](https://cbada-aus.github.io/CCDMQuarto/demos/template-pptx.pptx) ([Source](https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-pptx.qmd))
+See the included template and demo file for each format here: - **CCDM revealjs Presentation:** [CCDM revealjs Slide Demo](https://cbada-aus.github.io/CCDMQuarto/demos/template-revealjs.html#/title-slide) ([Source](https://github.com/CCDM-AUS/CCDMQuarto/blob/main/docs/demos/template-revealjs.qmd)) (this is an `CCDMQuarto` exclusive)
 
 ## Installing
 
@@ -61,18 +41,11 @@ For documentation on using reveal.js slides in Quarto, please see, <https://quar
 To use the formatted output, save your qmd file into the extension folder that you created using the command above.
 Then, in the output format use:
 
-- `cbada-docx+report`, for a full length MS Word report
-- `cbada-docx+short+report`, for a short MS Word report
-- `cbada-pptx`, for MS PPT output
 - `cbada-revealjs`, for a revealjs presentation
-- `cbada-pdf+report`, for a full length PDF report
-- `cbada-pdf+short+report`, for a short PDF report
 
 ### Template
 
 If you use the Bash command above to install the extension and create a sub directory following the command prompt, there will be a .qmd file created using the name that you input for the sub directory.
-
-By default, these templates use [{CCDMThemes}](https://cbada-aus.github.io/CCDMThemes/) and [{CCDMPalettes}](https://cbada-aus.github.io/CCDMPalettes/) for R graphical and tabular outputs.
 
 ## Updating
 
@@ -85,5 +58,5 @@ quarto update CCDM-CBADA/CBADAQuarto
 
 ## Logo Rights
 
-The logo of this project and the CCDM strategic partners do not come under MIT License.
-The Analytics for the Australian Grains Industry (CCDM) project retains full rights to the CCDM logo and the Grains Research and Development Corporation (GRDC) and strategic partners, Curtin University, the University of Queensland and Adelaide University, retain full rights to their own logos, respectively.
+The logos of this project do not come under MIT License.
+The Centre for Crop and Disease Management, Curtin University and the Grains Research and Development Corporation retain full rights to all logos.

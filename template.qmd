@@ -1,21 +1,14 @@
 ---
-format: 
-  # Delete the format that you don't want
-  # Presentation
+title: "Your Catchy Title Here"
+subtitle: "Your Subtitle Here"
+format:
   cbada-revealjs: default
-  cbada-pptx: default
-  # Report
-execute: 
+execute:
   echo: false
-# Delete these if you're using the template for presentation
 knitr:
-  opts_chunk: 
+  opts_chunk:
     fig.path: figures/
 params:
-# All the params can be changed to align to your organisation and collaborator.
-# These can be changed here or in the terminal using the following command with
-# each -P represents a parameter:
-#             quarto render ... -P $params$:... -P $params2$:///
   pri_bio: Your.Name
   email : your.email@curtin.edu.au
 date: "`r Sys.Date()`"
@@ -23,17 +16,6 @@ date-format: long
 bibliography: your_references.bib # Replace with your .bib file
 ---
 
----
-title: "Your Catchy Title Here"
-# To force line spacing put two spaces before \n instead of one
-subtitle: "Your Subtitle Here"
-author:
-  - "`r params$pri_bio`, Author 2"
-email: "`r params$email`"
----
-
 # To compile a presentation, please see:
 
 - Revealjs: <https://quarto.org/docs/presentations/revealjs/>
-
-- PowerPoint: <https://quarto.org/docs/presentations/powerpoint.html>
