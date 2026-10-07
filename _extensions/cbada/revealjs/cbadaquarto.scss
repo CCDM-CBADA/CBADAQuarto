@@ -278,10 +278,14 @@ $presentation-h4-font-size: 1.0em;
   background-position: top left !important;
   // The image renders at natural aspect: 1600x900 scaled to slide width.
   // The band occupies the top ~15% of the image / slide height.
-  // padding-top: 18% clears the band with a small margin before content.
-  padding-top: 18% !important;
+  padding-top: 10% !important;
   padding-bottom: 3em !important;
   box-sizing: border-box;
+}
+
+.reveal .slides section:not(.title):not(.section-slide) > h2 {
+  margin-top: 0;
+  line-height: 1.1;
 }
 
 // ---------------------------------------------------------------------------
