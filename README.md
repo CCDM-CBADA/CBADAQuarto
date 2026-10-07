@@ -31,15 +31,14 @@ You can obtain a copy of the extension by using the following commands in your B
 
 ```bash
 cd your_quarto_project_folder
-quarto use template CBADA/CBADAQuarto
+quarto use template CCDM-CBADA/CBADAQuarto
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your LaTeX PDF, MS Word .docx or reveal.js presentation slides.
 
 ## Using
 
-For documentation on using reveal.js slides in Quarto, please see,
-<https://quarto.org/docs/presentations/revealjs/>.
+For documentation on using reveal.js slides in Quarto, please see, <https://quarto.org/docs/presentations/revealjs/>.
 
 To use the formatted output, save your qmd file into the extension folder that you created using the command above.
 Then, in the output format use:
@@ -49,8 +48,7 @@ Then, in the output format use:
 
 ### Template
 
-If you use the Bash command above to install the extension and create a sub directory following the command prompt, there
-will be a .qmd file created using the name that you input for the sub directory.
+If you use the Bash command above to install the extension and create a sub directory following the command prompt, there will be a .qmd file created using the name that you input for the sub directory.
 
 By default, these templates use [{AAGIThemes}](https://aagi-aus.github.io/AAGIThemes/) and [{AAGIPalettes}](https://aagi-aus.github.io/AAGIPalettes/) for R graphical and tabular outputs.
 
