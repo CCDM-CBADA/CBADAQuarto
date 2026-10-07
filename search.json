@@ -1,45 +1,14 @@
 [
   {
-    "objectID": "demos/template-revealjs.html#an-ccdm-reveal.js-theme-for-quarto",
-    "href": "demos/template-revealjs.html#an-ccdm-reveal.js-theme-for-quarto",
-    "title": "CCDM",
-    "section": "An CCDM Reveal.js Theme for Quarto",
-    "text": "An CCDM Reveal.js Theme for Quarto\nThis Quarto extension allows you to create your slides using a theme that follows CCDM typography and colour styles and provides the official CCDM logo and cover image for the title slide."
-  },
-  {
-    "objectID": "demos/template-revealjs.html#basic-tables",
-    "href": "demos/template-revealjs.html#basic-tables",
-    "title": "CCDM",
-    "section": "Basic Tables",
-    "text": "Basic Tables\n| Syntax      | Description |\n| ----------- | ----------- |\n| Header      | Title       |\n| Paragraph   | Text        |\nThat renders like this.\n\n\n\nSyntax\nDescription\n\n\n\n\nHeader\nTitle\n\n\nParagraph\nText"
-  },
-  {
-    "objectID": "demos/template-revealjs.html#advanced-tables",
-    "href": "demos/template-revealjs.html#advanced-tables",
-    "title": "CCDM",
-    "section": "Advanced Tables",
-    "text": "Advanced Tables\n\nlibrary(dplyr)\nlibrary(gt)\n\ngt &lt;- gt(\n  head(airquality) |&gt;\n    mutate(`Month Name` = \"May\")\n)\ngt\n\n\n\n\n\n\n\nOzone\nSolar.R\nWind\nTemp\nMonth\nDay\nMonth Name\n\n\n\n\n41\n190\n7.4\n67\n5\n1\nMay\n\n\n36\n118\n8.0\n72\n5\n2\nMay\n\n\n12\n149\n12.6\n74\n5\n3\nMay\n\n\n18\n313\n11.5\n62\n5\n4\nMay\n\n\nNA\nNA\n14.3\n56\n5\n5\nMay\n\n\n28\nNA\n14.9\n66\n5\n6\nMay\n\n\n\n\n\n\n\n\n\nThis is an aside."
-  },
-  {
-    "objectID": "demos/template-revealjs.html#figures-with-ggplot2",
-    "href": "demos/template-revealjs.html#figures-with-ggplot2",
-    "title": "CCDM",
-    "section": "Figures with {ggplot2}",
-    "text": "Figures with {ggplot2}\n\n#Prepare data\n\nlibrary(gapminder)\nlibrary(dplyr)\nlibrary(ggplot2)\n\nfacet &lt;- gapminder |&gt;\n  filter(continent != \"Americas\") |&gt;\n  group_by(continent, year) |&gt;\n  summarise(pop = sum(as.numeric(pop)))\n\n#Make plot\nggplot() +\n  geom_area(data = facet, aes(x = year, y = pop, fill = continent)) +\n  facet_wrap(~continent, ncol = 5) +\n  scale_y_continuous(\n    breaks = c(0, 2000000000, 4000000000),\n    labels = c(0, \"2bn\", \"4bn\")\n  ) +\n  geom_hline(yintercept = 0, linewidth = 1, colour = \"#474747\") +\n  theme(legend.position = \"none\", axis.text.x = element_blank()) +\n  labs(\n    title = \"Asia's rapid growth\",\n    subtitle = \"Population growth by continent, 1952-2007\"\n  )"
-  },
-  {
-    "objectID": "demos/template-revealjs.html#slides-with-columns",
-    "href": "demos/template-revealjs.html#slides-with-columns",
-    "title": "CCDM",
-    "section": "Slides With Columns",
-    "text": "Slides With Columns\n\n\nThis is a column on the left.\n\nThis is a column on the right."
-  },
-  {
-    "objectID": "demos/template-revealjs.html#more-information",
-    "href": "demos/template-revealjs.html#more-information",
-    "title": "CCDM",
-    "section": "More Information",
-    "text": "More Information\nYou can learn more about controlling the appearance of revealjs output here: https://quarto.org/docs/presentations/revealjs/"
+    "objectID": "release-notes.html",
+    "href": "release-notes.html",
+    "title": "Release Notes",
+    "section": "",
+    "text": "0.0.1 (unreleased)\n\nPort from AAGIQuarto to CBADAQuarto",
+    "crumbs": [
+      "Extra",
+      "Release Notes"
+    ]
   },
   {
     "objectID": "index.html",
@@ -102,14 +71,45 @@
     ]
   },
   {
-    "objectID": "release-notes.html",
-    "href": "release-notes.html",
-    "title": "Release Notes",
-    "section": "",
-    "text": "0.0.1 (unreleased)\n\nPort from AAGIQuarto to CBADAQuarto",
-    "crumbs": [
-      "Extra",
-      "Release Notes"
-    ]
+    "objectID": "demos/template-revealjs.html#an-ccdm-reveal.js-theme-for-quarto",
+    "href": "demos/template-revealjs.html#an-ccdm-reveal.js-theme-for-quarto",
+    "title": "CCDM",
+    "section": "An CCDM Reveal.js Theme for Quarto",
+    "text": "An CCDM Reveal.js Theme for Quarto\nThis Quarto extension allows you to create your slides using a theme that follows CCDM typography and colour styles and provides the official CCDM logo and cover image for the title slide."
+  },
+  {
+    "objectID": "demos/template-revealjs.html#basic-tables",
+    "href": "demos/template-revealjs.html#basic-tables",
+    "title": "CCDM",
+    "section": "Basic Tables",
+    "text": "Basic Tables\n| Syntax      | Description |\n| ----------- | ----------- |\n| Header      | Title       |\n| Paragraph   | Text        |\nThat renders like this.\n\n\n\nSyntax\nDescription\n\n\n\n\nHeader\nTitle\n\n\nParagraph\nText"
+  },
+  {
+    "objectID": "demos/template-revealjs.html#advanced-tables",
+    "href": "demos/template-revealjs.html#advanced-tables",
+    "title": "CCDM",
+    "section": "Advanced Tables",
+    "text": "Advanced Tables\n\nlibrary(dplyr)\nlibrary(gt)\n\ngt &lt;- gt(\n  head(airquality) |&gt;\n    mutate(`Month Name` = \"May\")\n)\ngt\n\n\n\n\n\n\n\nOzone\nSolar.R\nWind\nTemp\nMonth\nDay\nMonth Name\n\n\n\n\n41\n190\n7.4\n67\n5\n1\nMay\n\n\n36\n118\n8.0\n72\n5\n2\nMay\n\n\n12\n149\n12.6\n74\n5\n3\nMay\n\n\n18\n313\n11.5\n62\n5\n4\nMay\n\n\nNA\nNA\n14.3\n56\n5\n5\nMay\n\n\n28\nNA\n14.9\n66\n5\n6\nMay\n\n\n\n\n\n\n\n\n\nThis is an aside."
+  },
+  {
+    "objectID": "demos/template-revealjs.html#figures-with-ggplot2",
+    "href": "demos/template-revealjs.html#figures-with-ggplot2",
+    "title": "CCDM",
+    "section": "Figures with {ggplot2}",
+    "text": "Figures with {ggplot2}\n\n#Prepare data\n\nlibrary(gapminder)\nlibrary(dplyr)\nlibrary(ggplot2)\n\nfacet &lt;- gapminder |&gt;\n  filter(continent != \"Americas\") |&gt;\n  group_by(continent, year) |&gt;\n  summarise(pop = sum(as.numeric(pop)))\n\n#Make plot\nggplot() +\n  geom_area(data = facet, aes(x = year, y = pop, fill = continent)) +\n  facet_wrap(~continent, ncol = 5) +\n  scale_y_continuous(\n    breaks = c(0, 2000000000, 4000000000),\n    labels = c(0, \"2bn\", \"4bn\")\n  ) +\n  geom_hline(yintercept = 0, linewidth = 1, colour = \"#474747\") +\n  theme(legend.position = \"none\", axis.text.x = element_blank()) +\n  labs(\n    title = \"Asia's rapid growth\",\n    subtitle = \"Population growth by continent, 1952-2007\"\n  )"
+  },
+  {
+    "objectID": "demos/template-revealjs.html#slides-with-columns",
+    "href": "demos/template-revealjs.html#slides-with-columns",
+    "title": "CCDM",
+    "section": "Slides With Columns",
+    "text": "Slides With Columns\n\n\nThis is a column on the left.\n\nThis is a column on the right."
+  },
+  {
+    "objectID": "demos/template-revealjs.html#more-information",
+    "href": "demos/template-revealjs.html#more-information",
+    "title": "CCDM",
+    "section": "More Information",
+    "text": "More Information\nYou can learn more about controlling the appearance of revealjs output here: https://quarto.org/docs/presentations/revealjs/"
   }
 ]
