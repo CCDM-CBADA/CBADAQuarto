@@ -50,10 +50,12 @@ jobs:
           with:
             version: "release"
 
+
         - name: Add extension directly into demos
           working-directory: ./docs
           run: |
-            quarto add CCDM-CBADA/CBADAQuarto --no-prompt
+            mkdir -p _extensions/CCDM-CBADA
+            cp -r ../_extensions/CCDM-CBADA/cbada _extensions/CCDM-CBADA/
 
         - name: Copy fonts from extension to docs
           run: |
