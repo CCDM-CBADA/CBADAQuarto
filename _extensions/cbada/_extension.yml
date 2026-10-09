@@ -1,29 +1,57 @@
 title: CBADAQuarto
-author: Adam H. Sparks, James J. Balamuta, Russell Edson, Vinh Thiem Ma, Rose Megirian, Zhanglong Cao, Sam Rogers, Julian Taylor
+author:
+  - Adam H. Sparks
+  - James J. Balamuta
+  - Russell Edson
+  - Vinh Thiem Ma
+  - Rose Megirian
+  - Zhanglong Cao
+  - Sam Rogers
+  - Julian Taylor
+
 version: 0.0.1
 quarto-required: ">=1.4.0"
+
 contributes:
   formats:
     revealjs:
-      theme: [default, revealjs/cbadaquarto.scss]
+      theme:
+        - default
+        - revealjs/cbadaquarto.scss
+
       date-format: long
-      slide-number: false 
+      slide-number: false
       footer: ""
       logo: assets/ccdm-logos.png
+
       title-slide-attributes:
         data-background-image: assets/title-slide-main.png
         data-background-size: cover
         data-background-position: center
+
       highlight-style: breeze
       overview: true
       progress: true
       touch: true
       chalkboard: false
       menu: false
+
       execute:
         echo: true
-    pptx:
-      reference-doc: pptx/template.pptx
-      toc: true
-      number-sections: false
-      incremental: true
+
+  metadata:
+    embed-resources: true
+
+    format-resources:
+      - assets/AAGI_logo.svg
+      - assets/title-slide-main.png
+      - assets/fonts/FiraCode-Bold.woff2
+      - assets/fonts/FiraCode-Light.woff2
+      - assets/fonts/FiraCode-Medium.woff2
+      - assets/fonts/FiraCode-Regular.woff2
+      - assets/fonts/FiraCode-VF.woff2
+      - assets/fonts/FiraCode-Bold.ttf
+      - assets/fonts/FiraCode-Light.ttf
+      - assets/fonts/FiraCode-Medium.ttf
+      - assets/fonts/FiraCode-Regular.ttf
+      - assets/fonts/FiraCode-Retina.ttf
