@@ -7,7 +7,7 @@ contributes:
     revealjs:
       theme: [default, revealjs/cbadaquarto.scss]
       date-format: long
-      slide-number: true
+      slide-number: false 
       footer: ""
       logo: assets/ccdm-logos.png
       title-slide-attributes:
