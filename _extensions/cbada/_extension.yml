@@ -9,7 +9,7 @@ contributes:
       date-format: long
       slide-number: true
       footer: ""
-      logo: assets/ccdm-logo.png
+      logo: assets/ccdm-logos.png
       title-slide-attributes:
         data-background-image: assets/title-slide-main.png
         data-background-size: cover
