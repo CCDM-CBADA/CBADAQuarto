@@ -67,26 +67,24 @@ $presentation-h4-font-size: 1.0em;
 
 @font-face {
   font-family: "Fira Code";
-  src: url("assets/fonts/FiraCode-Regular.woff2") format("woff2");
+  font-style: normal;
   font-weight: 400;
-  font-style: normal;
   font-display: swap;
+  src: url("../../../../../_extensions/CCDM-CBADA/cbada/assets/fonts/FiraCode-Regular.woff2") format("woff2");
 }
-
 @font-face {
   font-family: "Fira Code";
-  src: url("assets/fonts/FiraCode-Medium.woff2") format("woff2");
+  font-style: normal;
   font-weight: 500;
-  font-style: normal;
   font-display: swap;
+  src: url("../../../../../_extensions/CCDM-CBADA/cbada/assets/fonts/FiraCode-Medium.woff2") format("woff2");
 }
-
 @font-face {
   font-family: "Fira Code";
-  src: url("assets/fonts/FiraCode-Bold.woff2") format("woff2");
-  font-weight: 700;
   font-style: normal;
+  font-weight: 700;
   font-display: swap;
+  src: url("../../../../../_extensions/CCDM-CBADA/cbada/assets/fonts/FiraCode-Bold.woff2") format("woff2");
 }
 
 // Shared look for overlay-card / closing-card
@@ -126,6 +124,17 @@ $presentation-h4-font-size: 1.0em;
 
   @each $name, $c in (teal: $teal, green: $green, gold: $gold, orange: $orange) {
     .accent-#{$name} { color: $c; font-weight: 600; }
+  }
+
+  // Semi-transparent white panel behind the sub-headings
+  h1, h3, .subtitle {
+    background-color: rgba(255, 255, 255, 0.75);   // 0 = invisible, 1 = solid white
+    padding: 0.2em 0.5em;
+    border-radius: 0.2em;
+    width: fit-content;                // hug the text instead of spanning the slide
+    max-width: 100%;                   // match your h1/.subtitle width
+    box-decoration-break: clone;       // keeps the padding on each line if it wraps
+    -webkit-box-decoration-break: clone;
   }
 
   // ---- Code ---------------------------------------------------------------
@@ -199,7 +208,6 @@ $presentation-h4-font-size: 1.0em;
     inset: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.48;
     z-index: -1;
   }
 
@@ -265,14 +273,6 @@ $presentation-h4-font-size: 1.0em;
     z-index: 1;
   }
 
-  .slide-number {
-    background: rgba($teal, 0.15);
-    color: $teal-dark;
-    border-radius: 4px;
-    font-size: 0.55em;
-    padding: 0.15em 0.5em;
-  }
-
   .progress { color: $teal; span { background: $teal; } }
 
   // ---- Fragments ----------------------------------------------------------
@@ -291,14 +291,35 @@ $presentation-h4-font-size: 1.0em;
 }
 
 // ---------------------------------------------------------------------------
-// Logo and controls — put at the top of the slide to avoid text overlap
+// Slide headings sit at top of page over the header banner image
+// ---------------------------------------------------------------------------
+h2 {
+    position: absolute;
+    top: 0.1em;
+    left: 0;
+    width: 75%;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 0 0.35em rgba(255, 255, 255, 0.85);
+  }
+
+// ---------------------------------------------------------------------------
+// Logo sits in the transparent area to the right of the banner's angled edge.
+// .slide-logo is position: fixed (viewport-relative) while the banner is 100% of
+// the viewport width, so size both in vw and they scale together.
 // ---------------------------------------------------------------------------
 .reveal .slide-logo {
-  top: 0.5em !important;
-  right: 1.75em !important;
-  max-height: 5.5em !important;
-  width: auto !important;
+  top: 1vw !important;
+  right: 1.5vw !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: 15vw !important;        // clears the stripe, which ends at ~82% of the width at the top
+  height: 7.5vw !important;      // banner is ~9.7vw tall, so ~1vw above and ~1vw below
+  max-height: none !important;
+  object-fit: contain;           // keeps the logo's aspect ratio inside the box
+  object-position: right center;
 }
+
 
 // ---------------------------------------------------------------------------
 // Banner is drawn on reveal's full-viewport background layer (not on the
@@ -317,14 +338,32 @@ $presentation-h4-font-size: 1.0em;
   pointer-events: none;
 }
 
-// The section itself no longer carries an image: it only reserves room for the banner.
 .reveal .slides section:not(.title):not(.section-slide) {
   background: none !important;
-  padding-top: 10% !important;   /* raise/lower to taste; clears the banner */
+  padding-top: 10% !important;   /* clears the banner */
   padding-bottom: 3em !important;
   box-sizing: border-box;
 
-  > h2 { margin-top: 0; line-height: 1.1; }
+  > h2 {
+    position: absolute;
+    top: 0.1em;
+    left: 0;
+    width: 75%;
+    margin: 0;
+    line-height: 1.1;
+    text-shadow: 0 0 0.35em rgba(255, 255, 255, 0.85);
+  }
+
+  /* full-screen image slides: no banner, normal flow */
+  &.no-banner {
+    padding-top: 0 !important;
+    > h2 { display: none !important; }
+  }
+}
+
+.reveal:has(.slides section.present.no-banner) {
+  .slide-logo,
+  .footer { display: none !important; }
 }
 
 // ---------------------------------------------------------------------------
