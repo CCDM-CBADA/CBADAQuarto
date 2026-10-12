@@ -11,7 +11,6 @@ See the included template and demo file for each format here:
 ### Presentation Formats
 
 - **CCDM revealjs Presentation:** [CCDM revealjs Slide Demo](https://CBADA.github.io/CBADAQuarto/demos/template-revealjs.html#/title-slide) ([Source](https://github.com/CBADA/CBADAQuarto/blob/main/docs/demos/template-revealjs.qmd))
-- **CCDM PowerPoint Presentation:** [CCDM Slide Demo](https://cbada.github.io/CBADAQuarto/demos/template-pptx.pptx) ([Source](https://github.com/cbada/CBADAQuarto/blob/main/docs/demos/template-pptx.qmd))
 
 ## Installing
 
@@ -49,8 +48,6 @@ Then, in the output format use:
 ### Template
 
 If you use the Bash command above to install the extension and create a sub directory following the command prompt, there will be a .qmd file created using the name that you input for the sub directory.
-
-By default, these templates use [{AAGIThemes}](https://aagi-aus.github.io/AAGIThemes/) and [{AAGIPalettes}](https://aagi-aus.github.io/AAGIPalettes/) for R graphical and tabular outputs.
 
 ## Updating
 
