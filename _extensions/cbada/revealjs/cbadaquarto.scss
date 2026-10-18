@@ -314,7 +314,7 @@ $presentation-h4-font-size: 1.0em;
 // layout/centering. reveal copies each slide's classes onto its background
 // element, so the same :not() selectors apply.
 // ---------------------------------------------------------------------------
-.reveal .backgrounds .slide-background:not(.title):not(.section-slide)::before {
+.reveal .backgrounds .slide-background.present:not(.title):not(.section-slide)::before {
   content: "";
   position: absolute;
   top: 0;
