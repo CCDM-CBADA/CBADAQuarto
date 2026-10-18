@@ -325,7 +325,7 @@ $presentation-h4-font-size: 1.0em;
   pointer-events: none;
 }
 
-.reveal .slides section:not(.title) {
+.reveal .slides section:not(.title):not(.section-slide) {
   background: none !important;
   padding-top: 10% !important;
   padding-bottom: 3em !important;
