@@ -325,9 +325,9 @@ $presentation-h4-font-size: 1.0em;
   pointer-events: none;
 }
 
-.reveal .slides section:not(.title):not(.section-slide) {
+.reveal .slides section:not(.title) {
   background: none !important;
-  padding-top: 10% !important;   /* clears the banner */
+  padding-top: 10% !important;
   padding-bottom: 3em !important;
   box-sizing: border-box;
 
@@ -351,6 +351,17 @@ $presentation-h4-font-size: 1.0em;
 .reveal:has(.slides section.present.no-banner) {
   .slide-logo,
   .footer { display: none !important; }
+}
+
+.reveal section.section-slide,
+.reveal section[data-state="section"] {
+  background: $teal-dark !important;
+  background-image: none;
+  color: $white;
+  h1, h2 { color: $white !important; }
+  padding-top: 10% !important;
+  padding-bottom: 3em !important;
+  box-sizing: border-box;
 }
 
 // ---------------------------------------------------------------------------
