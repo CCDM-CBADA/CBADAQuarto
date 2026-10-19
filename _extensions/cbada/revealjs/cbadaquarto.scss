@@ -331,7 +331,8 @@ $presentation-h4-font-size: 1.0em;
   padding-bottom: 3em !important;
   box-sizing: border-box;
 
-  > h2 {
+  // Put the first heading (h1-h6) on the banner, regardless of level.
+  > :is(h1, h2, h3, h4, h5, h6):first-child {
     position: absolute;
     top: 0.1em;
     left: 0;
@@ -344,7 +345,7 @@ $presentation-h4-font-size: 1.0em;
   /* full-screen image slides: no banner, normal flow */
   &.no-banner {
     padding-top: 0 !important;
-    > h2 { display: none !important; }
+    > :is(h1, h2, h3, h4, h5, h6):first-child { display: none !important; }
   }
 }
 
