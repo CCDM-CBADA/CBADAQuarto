@@ -16,6 +16,13 @@ date-format: long
 bibliography: your_references.bib # Replace with your .bib file
 ---
 
-# To compile a presentation, please see:
+## To compile a presentation, please see:
 
 - Revealjs: <https://quarto.org/docs/presentations/revealjs/>
+
+# Section
+
+## New slide
+
+- Bullet point
+- Bullet point 2
