@@ -333,7 +333,7 @@ $presentation-h4-font-size: 1.0em;
   }
 }
 
-.reveal .slides section:not(.title):not(.section-slide) {
+.reveal .slides section:not(.title):not(.section-slide):not([data-state="section"]) {
   background: none !important;
   // reveal vertically centres sections via an inline top offset; pin to the
   // top of the slide area so the title sits on the banner
@@ -342,7 +342,6 @@ $presentation-h4-font-size: 1.0em;
   padding-bottom: 3em !important;
   box-sizing: border-box;
 
-  > h1,
   > h2 {
     position: absolute;
     top: 0.1em;
@@ -356,7 +355,6 @@ $presentation-h4-font-size: 1.0em;
   /* full-screen image slides: no banner, normal flow */
   &.no-banner {
     padding-top: 0 !important;
-    > h1,
     > h2 {
       display: none !important;
     }
@@ -427,8 +425,7 @@ $presentation-h4-font-size: 1.0em;
     h1, h2, h3, h4 { color: $teal-dark !important; }
     p, li { color: $dark-text !important; }
 
-    .slides section:not(.title):not(.section-slide):not(.no-banner) {
-      > h1,
+    .slides section:not(.title):not(.section-slide):not([data-state="section"]):not(.no-banner) {
       > h2 {
         position: absolute;
         top: 0.1em;
