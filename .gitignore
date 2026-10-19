@@ -372,3 +372,8 @@ AAGIQuarto.Rproj
 **/*.quarto_ipynb
 /docs/_extensions/CCDM-CBADA/cbada
 /docs/_extensions
+/FiraCode-Bold.woff2
+/FiraCode-Medium.woff2
+/FiraCode-Regular.woff2
+/ccdm-logos.png
+/title-slide-main.png
